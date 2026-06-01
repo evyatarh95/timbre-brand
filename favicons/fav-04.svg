@@ -1,0 +1,17 @@
+<svg viewBox="0 0 64 64" width="64" height="64" xmlns="http://www.w3.org/2000/svg">
+  <title>TIMBR — gradient T on light squircle</title>
+  <defs>
+    <linearGradient id="f04grad" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FF3D7F"/>
+      <stop offset="55%" stop-color="#FF5A2B"/>
+      <stop offset="100%" stop-color="#FF8A1F"/>
+    </linearGradient>
+    <clipPath id="f04tile">
+      <rect x="0" y="0" width="64" height="64" rx="15" ry="15"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#f04tile)">
+    <rect x="0" y="0" width="64" height="64" fill="#fafafa"/>
+    <path d="M14 15 H50 V26 H39 V49 H25 V26 H14 Z" fill="url(#f04grad)"/>
+  </g>
+</svg>

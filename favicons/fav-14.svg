@@ -1,0 +1,19 @@
+<svg viewBox="0 0 64 64" width="64" height="64" xmlns="http://www.w3.org/2000/svg">
+  <title>TIMBR diagonal split squircle T</title>
+  <defs>
+    <clipPath id="f14tile">
+      <rect x="0" y="0" width="64" height="64" rx="15" ry="15"/>
+    </clipPath>
+    <clipPath id="f14diag">
+      <path d="M0 0 L64 0 L0 64 Z"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#f14tile)">
+    <rect x="0" y="0" width="64" height="64" fill="#FF8A1F"/>
+    <rect x="0" y="0" width="64" height="64" fill="#FF3D7F" clip-path="url(#f14diag)"/>
+    <g fill="#fafafa">
+      <rect x="14" y="17" width="36" height="9" rx="2.5"/>
+      <rect x="27.5" y="17" width="9" height="33" rx="2.5"/>
+    </g>
+  </g>
+</svg>

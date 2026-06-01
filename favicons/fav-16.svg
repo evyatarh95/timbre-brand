@@ -1,0 +1,22 @@
+<svg viewBox="0 0 64 64" width="64" height="64" xmlns="http://www.w3.org/2000/svg">
+  <title>TIMBR favicon — soundwave T</title>
+  <defs>
+    <linearGradient id="f16grad" x1="6" y1="6" x2="58" y2="58" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FF3D7F"/>
+      <stop offset="0.55" stop-color="#FF5A2B"/>
+      <stop offset="1" stop-color="#FF8A1F"/>
+    </linearGradient>
+    <clipPath id="f16tile">
+      <rect x="0" y="0" width="64" height="64" rx="15" ry="15"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#f16tile)">
+    <rect x="0" y="0" width="64" height="64" fill="#05050a"/>
+    <rect x="0" y="0" width="64" height="64" rx="15" ry="15" fill="none" stroke="#0a0a0c" stroke-width="2"/>
+  </g>
+  <!-- Horizontal crossbar of the T: a soundwave that rises into a tall amplitude spike, then bends down to form the stem -->
+  <path d="M12 22 H22 L27 22 Q31 22 31.5 19 Q32 16 32.5 19 Q33 22 37 22 H52"
+        fill="none" stroke="url(#f16grad)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Stem of the T descending from the wave peak -->
+  <path d="M32 21 V50" fill="none" stroke="url(#f16grad)" stroke-width="7" stroke-linecap="round"/>
+</svg>

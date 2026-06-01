@@ -1,0 +1,20 @@
+<svg viewBox="0 0 64 64" width="64" height="64" xmlns="http://www.w3.org/2000/svg">
+  <title>TIMBR favicon — stacked-bar T on sunset squircle</title>
+  <defs>
+    <linearGradient id="f15grad" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FF3D7F"/>
+      <stop offset="55%" stop-color="#FF5A2B"/>
+      <stop offset="100%" stop-color="#FF8A1F"/>
+    </linearGradient>
+    <clipPath id="f15clip">
+      <rect x="0" y="0" width="64" height="64" rx="15" ry="15"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#f15clip)">
+    <rect x="0" y="0" width="64" height="64" fill="#05050a"/>
+    <rect x="0" y="0" width="64" height="64" fill="url(#f15grad)"/>
+    <rect x="14" y="16" width="36" height="8" rx="4" fill="#fafafa"/>
+    <rect x="28" y="28" width="8" height="20" rx="4" fill="#fafafa"/>
+    <rect x="20" y="40" width="24" height="8" rx="4" fill="#fafafa"/>
+  </g>
+</svg>

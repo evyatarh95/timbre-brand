@@ -1,0 +1,20 @@
+<svg viewBox="0 0 64 64" width="64" height="64" xmlns="http://www.w3.org/2000/svg">
+<title>TIMBR play-stem T squircle favicon</title>
+<defs>
+<linearGradient id="f11grad" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+<stop offset="0" stop-color="#FF3D7F"/>
+<stop offset="0.55" stop-color="#FF5A2B"/>
+<stop offset="1" stop-color="#FF8A1F"/>
+</linearGradient>
+<clipPath id="f11clip">
+<rect x="0" y="0" width="64" height="64" rx="15" ry="15"/>
+</clipPath>
+</defs>
+<g clip-path="url(#f11clip)">
+<rect x="0" y="0" width="64" height="64" fill="#05050a"/>
+<rect x="0" y="0" width="64" height="64" fill="url(#f11grad)"/>
+<rect x="14" y="15" width="36" height="9" rx="2" fill="#fafafa"/>
+<rect x="27.5" y="22" width="9" height="16" fill="#fafafa"/>
+<path d="M27.5 38 L36.5 38 L46 50 L18 50 Z" fill="#fafafa"/>
+</g>
+</svg>

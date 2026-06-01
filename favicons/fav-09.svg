@@ -1,0 +1,25 @@
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <title>TIMBR favicon — white T with sunset gradient underline</title>
+  <defs>
+    <linearGradient id="f09sweep" x1="0" y1="0" x2="1" y2="1" gradientTransform="rotate(0)">
+      <stop offset="0%" stop-color="#FF3D7F"/>
+      <stop offset="55%" stop-color="#FF5A2B"/>
+      <stop offset="100%" stop-color="#FF8A1F"/>
+    </linearGradient>
+    <linearGradient id="f09tile" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a0a0c"/>
+      <stop offset="100%" stop-color="#05050a"/>
+    </linearGradient>
+    <clipPath id="f09clip">
+      <rect x="0" y="0" width="64" height="64" rx="15" ry="15"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#f09clip)">
+    <rect x="0" y="0" width="64" height="64" fill="url(#f09tile)"/>
+    <!-- Bold T: horizontal bar + vertical stem -->
+    <rect x="15" y="17" width="34" height="9" rx="2.5" fill="#fafafa"/>
+    <rect x="27.5" y="17" width="9" height="27" rx="2.5" fill="#fafafa"/>
+    <!-- Sunset gradient underline sweep -->
+    <rect x="15" y="48" width="34" height="6" rx="3" fill="url(#f09sweep)"/>
+  </g>
+</svg>

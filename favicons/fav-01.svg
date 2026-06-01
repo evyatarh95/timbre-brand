@@ -1,0 +1,17 @@
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <title>TIMBR sunset T tile</title>
+  <defs>
+    <linearGradient id="f01grad" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FF3D7F"/>
+      <stop offset="55%" stop-color="#FF5A2B"/>
+      <stop offset="100%" stop-color="#FF8A1F"/>
+    </linearGradient>
+    <clipPath id="f01tile">
+      <rect x="0" y="0" width="64" height="64" rx="15" ry="15"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#f01tile)">
+    <rect x="0" y="0" width="64" height="64" fill="url(#f01grad)"/>
+    <path d="M16 17h32a3 3 0 0 1 0 6H38v24a3 3 0 0 1-6 0V23H16a3 3 0 0 1 0-6z" fill="#fafafa"/>
+  </g>
+</svg>

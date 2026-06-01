@@ -1,0 +1,20 @@
+<svg viewBox="0 0 64 64" width="64" height="64" xmlns="http://www.w3.org/2000/svg">
+  <title>TIMBR — gradient squircle with bold white T and live dot</title>
+  <defs>
+    <linearGradient id="f19grad" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FF3D7F"/>
+      <stop offset="0.55" stop-color="#FF5A2B"/>
+      <stop offset="1" stop-color="#FF8A1F"/>
+    </linearGradient>
+    <clipPath id="f19clip">
+      <rect x="0" y="0" width="64" height="64" rx="15" ry="15"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#f19clip)">
+    <rect x="0" y="0" width="64" height="64" fill="#05050a"/>
+    <rect x="0" y="0" width="64" height="64" fill="url(#f19grad)"/>
+  </g>
+  <rect x="14" y="17" width="36" height="9" rx="2.5" fill="#fafafa"/>
+  <rect x="27.5" y="17" width="9" height="32" rx="2.5" fill="#fafafa"/>
+  <circle cx="48" cy="17" r="6" fill="#FF3A2A"/>
+</svg>

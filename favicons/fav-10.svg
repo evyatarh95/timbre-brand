@@ -1,0 +1,22 @@
+<svg viewBox="0 0 64 64" width="64" height="64" xmlns="http://www.w3.org/2000/svg">
+  <title>TIMBR — T+R sunset monogram tile</title>
+  <defs>
+    <linearGradient id="f10grad" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FF3D7F"/>
+      <stop offset="0.55" stop-color="#FF5A2B"/>
+      <stop offset="1" stop-color="#FF8A1F"/>
+    </linearGradient>
+    <clipPath id="f10clip">
+      <path d="M32 1 C12 1 1 12 1 32 C1 52 12 63 32 63 C52 63 63 52 63 32 C63 12 52 1 32 1 Z"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#f10clip)">
+    <rect width="64" height="64" fill="url(#f10grad)"/>
+    <!-- T: top bar + descending stem -->
+    <rect x="14" y="16" width="36" height="8" rx="2" fill="#fafafa"/>
+    <rect x="28" y="16" width="8" height="32" rx="2" fill="#fafafa"/>
+    <!-- R: bowl + leg interlocking off the T stem -->
+    <path d="M36 24 h7 a8 8 0 0 1 0 16 h-7 v-6 h7 a2 2 0 0 0 0 -4 h-7 Z" fill="#fafafa"/>
+    <rect x="40" y="38" width="8" height="11" rx="2" fill="#fafafa" transform="rotate(-32 44 43)"/>
+  </g>
+</svg>

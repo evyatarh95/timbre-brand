@@ -1,0 +1,23 @@
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <title>TIMBR favicon — corner-glow gradient T</title>
+  <defs>
+    <linearGradient id="f17T" x1="14" y1="14" x2="50" y2="50" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FF3D7F"/>
+      <stop offset="0.55" stop-color="#FF5A2B"/>
+      <stop offset="1" stop-color="#FF8A1F"/>
+    </linearGradient>
+    <radialGradient id="f17Glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(52 12) rotate(135) scale(46)">
+      <stop offset="0" stop-color="#FF6A00" stop-opacity="0.7"/>
+      <stop offset="0.5" stop-color="#FF5A2B" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#FF5A2B" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="f17Clip">
+      <rect x="2" y="2" width="60" height="60" rx="15"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#f17Clip)">
+    <rect x="2" y="2" width="60" height="60" rx="15" fill="#05050a"/>
+    <rect x="2" y="2" width="60" height="60" fill="url(#f17Glow)"/>
+  </g>
+  <path d="M16 19h32v9H38v25H26V28H16z" fill="url(#f17T)"/>
+</svg>

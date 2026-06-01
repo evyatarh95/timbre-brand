@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <title>TIMBR sunset squircle knockout T</title>
+  <defs>
+    <linearGradient id="f05grad" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FF3D7F"/>
+      <stop offset="55%" stop-color="#FF5A2B"/>
+      <stop offset="100%" stop-color="#FF8A1F"/>
+    </linearGradient>
+    <clipPath id="f05tile">
+      <rect x="0" y="0" width="64" height="64" rx="15" ry="15"/>
+    </clipPath>
+    <mask id="f05mask">
+      <rect x="0" y="0" width="64" height="64" rx="15" ry="15" fill="#fff"/>
+      <rect x="16" y="17" width="32" height="9" rx="2" fill="#000"/>
+      <rect x="27.5" y="17" width="9" height="30" rx="2" fill="#000"/>
+    </mask>
+  </defs>
+  <g clip-path="url(#f05tile)">
+    <rect x="0" y="0" width="64" height="64" fill="#05050a"/>
+    <rect x="0" y="0" width="64" height="64" fill="url(#f05grad)" mask="url(#f05mask)"/>
+  </g>
+</svg>
