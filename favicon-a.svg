@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <title>TIMBR favicon — white T on sunset-glow tile</title>
+  <defs>
+    <radialGradient id="faTR" cx="82%" cy="6%" r="70%"><stop offset="0" stop-color="#FF5A2B" stop-opacity="0.65"/><stop offset="1" stop-color="#FF5A2B" stop-opacity="0"/></radialGradient>
+    <radialGradient id="faBL" cx="14%" cy="100%" r="75%"><stop offset="0" stop-color="#FF3D7F" stop-opacity="0.55"/><stop offset="1" stop-color="#FF3D7F" stop-opacity="0"/></radialGradient>
+    <filter id="faGrain"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch" result="n"/><feColorMatrix in="n" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.05 0"/></filter>
+    <clipPath id="faClip"><rect width="64" height="64" rx="15"/></clipPath>
+  </defs>
+  <g clip-path="url(#faClip)">
+    <rect width="64" height="64" fill="#05050a"/>
+    <rect width="64" height="64" fill="url(#faTR)"/>
+    <rect width="64" height="64" fill="url(#faBL)"/>
+    <rect width="64" height="64" filter="url(#faGrain)"/>
+  </g>
+  <rect x="15" y="16.5" width="34" height="9.5" rx="2.5" fill="#fafafa"/>
+  <rect x="27.25" y="16.5" width="9.5" height="32" rx="2.5" fill="#fafafa"/>
+</svg>

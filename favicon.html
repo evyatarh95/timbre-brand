@@ -1,0 +1,67 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TIMBR — Favicon</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#05050a;--card:#0a0a0c;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:var(--bg);color:#fafafa;font-family:'Space Grotesk',sans-serif;}
+.nav{position:sticky;top:0;z-index:99;display:flex;gap:10px;justify-content:center;padding:12px;background:rgba(5,5,10,.92);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.08)}
+.nav a{font-family:'JetBrains Mono',monospace;font-size:12px;text-decoration:none;padding:7px 18px;border:1px solid rgba(255,255,255,.15);border-radius:99px;color:#fafafa}
+.nav a.on{border-color:#FF6A00;color:#FF6A00}
+.wrap{padding:40px 30px 90px;max-width:1100px;margin:0 auto;}
+h1{font-size:34px;font-weight:700;letter-spacing:-.02em;text-align:center}
+h1 .g{background:linear-gradient(135deg,#FF3D7F,#FF5A2B 55%,#FF8A1F);-webkit-background-clip:text;background-clip:text;color:transparent}
+.sub{font-family:'JetBrains Mono',monospace;font-size:12px;color:#8a8a93;text-align:center;margin:10px 0 36px;letter-spacing:.04em}
+.row{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+@media(max-width:820px){.row{grid-template-columns:1fr}}
+.opt{background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:26px}
+.opt.def{border-color:#FF6A00}
+.opt h2{font-size:15px;font-weight:600;margin-bottom:4px}
+.opt .tag{font-family:'JetBrains Mono',monospace;font-size:10px;color:#FF6A00;letter-spacing:.1em;text-transform:uppercase}
+.sizes{display:flex;align-items:flex-end;gap:18px;margin:22px 0 10px}
+.sizes figure{text-align:center}
+.sizes img{display:block;image-rendering:auto}
+.sizes figcaption{font-family:'JetBrains Mono',monospace;font-size:9px;color:#5a5a63;margin-top:6px}
+.s64{width:64px;height:64px}.s32{width:32px;height:32px}.s16{width:16px;height:16px}
+.tab{margin-top:18px;display:flex;align-items:center;gap:8px;background:#1a1a22;border-radius:9px 9px 0 0;padding:8px 12px;width:210px}
+.tab img{width:16px;height:16px}.tab span{font-size:11px;color:#cfcfd6}.tab .x{margin-left:auto;color:#6a6a73;font-size:12px}
+p.note{color:#9a9aa3;font-size:12px;line-height:1.5;margin-top:10px}
+</style></head><body>
+<div class="nav"><a href="index.html">120 MARKS</a><a href="lockups.html">90 LOCKUPS</a><a href="favicon.html" class="on">FAVICON</a></div>
+<div class="wrap">
+<h1>TIM<span class="g">BR</span> — Favicon</h1>
+<div class="sub">BetterRadioSite background DNA · near-black #05050a + warm radial sunset glow + grain · the TIMBR “T” mark</div>
+<div class="row">
+  <div class="opt def">
+    <span class="tag">Default</span><h2>B · Gradient T</h2>
+    <div class="sizes">
+      <figure><img class="s64" src="favicon-b.svg" alt="b64"><figcaption>64</figcaption></figure>
+      <figure><img class="s32" src="favicon-b.svg" alt="b32"><figcaption>32</figcaption></figure>
+      <figure><img class="s16" src="favicon-b.svg" alt="b16"><figcaption>16</figcaption></figure>
+    </div>
+    <div class="tab"><img src="favicon-b.svg" alt=""><span>TIMBR</span><span class="x">×</span></div>
+    <p class="note">Sunset-gradient T on the dark glow tile. The premium default — pure brand color in the mark.</p>
+  </div>
+  <div class="opt">
+    <span class="tag">Option A</span><h2>A · White T</h2>
+    <div class="sizes">
+      <figure><img class="s64" src="favicon-a.svg" alt="a64"><figcaption>64</figcaption></figure>
+      <figure><img class="s32" src="favicon-a.svg" alt="a32"><figcaption>32</figcaption></figure>
+      <figure><img class="s16" src="favicon-a.svg" alt="a16"><figcaption>16</figcaption></figure>
+    </div>
+    <div class="tab"><img src="favicon-a.svg" alt=""><span>TIMBR</span><span class="x">×</span></div>
+    <p class="note">White T on the glow tile — maximum contrast, sharpest legibility at 16px.</p>
+  </div>
+  <div class="opt">
+    <span class="tag">Option C</span><h2>C · T + Waveform</h2>
+    <div class="sizes">
+      <figure><img class="s64" src="favicon-c.svg" alt="c64"><figcaption>64</figcaption></figure>
+      <figure><img class="s32" src="favicon-c.svg" alt="c32"><figcaption>32</figcaption></figure>
+      <figure><img class="s16" src="favicon-c.svg" alt="c16"><figcaption>16</figcaption></figure>
+    </div>
+    <div class="tab"><img src="favicon-c.svg" alt=""><span>TIMBR</span><span class="x">×</span></div>
+    <p class="note">White T over a sunset waveform — most musical, but the wave can blur below ~20px.</p>
+  </div>
+</div>
+</div></body></html>

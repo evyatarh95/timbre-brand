@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <title>TIMBR favicon — T with sunset waveform on glow tile</title>
+  <defs>
+    <linearGradient id="fcW" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#FF3D7F"/><stop offset="0.55" stop-color="#FF5A2B"/><stop offset="1" stop-color="#FF8A1F"/></linearGradient>
+    <radialGradient id="fcTR" cx="82%" cy="6%" r="70%"><stop offset="0" stop-color="#FF5A2B" stop-opacity="0.6"/><stop offset="1" stop-color="#FF5A2B" stop-opacity="0"/></radialGradient>
+    <radialGradient id="fcBL" cx="14%" cy="100%" r="75%"><stop offset="0" stop-color="#FF3D7F" stop-opacity="0.5"/><stop offset="1" stop-color="#FF3D7F" stop-opacity="0"/></radialGradient>
+    <filter id="fcGrain"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch" result="n"/><feColorMatrix in="n" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.05 0"/></filter>
+    <clipPath id="fcClip"><rect width="64" height="64" rx="15"/></clipPath>
+  </defs>
+  <g clip-path="url(#fcClip)">
+    <rect width="64" height="64" fill="#05050a"/>
+    <rect width="64" height="64" fill="url(#fcTR)"/>
+    <rect width="64" height="64" fill="url(#fcBL)"/>
+    <rect width="64" height="64" filter="url(#fcGrain)"/>
+  </g>
+  <rect x="15" y="15" width="34" height="9.5" rx="2.5" fill="#fafafa"/>
+  <rect x="27.25" y="15" width="9.5" height="22" rx="2.5" fill="#fafafa"/>
+  <path d="M14 45 q5 -9 10 0 t10 0 t10 0 t6 0" fill="none" stroke="url(#fcW)" stroke-width="4" stroke-linecap="round"/>
+</svg>
