@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <title>TIMBR favicon — bold rounded T on sunset gradient (cleanest at 16px)</title>
+  <defs>
+    <linearGradient id="ffBg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FF3D7F"/><stop offset="0.55" stop-color="#FF5A2B"/><stop offset="1" stop-color="#FF8A1F"/></linearGradient>
+    <clipPath id="ffClip"><rect width="64" height="64" rx="15"/></clipPath>
+  </defs>
+  <g clip-path="url(#ffClip)"><rect width="64" height="64" fill="url(#ffBg)"/></g>
+  <g fill="#fafafa">
+    <rect x="16" y="17" width="32" height="12" rx="6"/>
+    <rect x="26" y="17" width="12" height="34" rx="6"/>
+  </g>
+</svg>
