@@ -6,26 +6,108 @@
 .head h1 .g{background:linear-gradient(90deg,#ff2f6d,#ff8a1f);-webkit-background-clip:text;background-clip:text;color:transparent}
 .head p{font-size:12px;color:#8a8a93;margin-top:8px;letter-spacing:.1em}
 .bar{display:flex;gap:9px;justify-content:center;flex-wrap:wrap;margin:20px 0 30px}
-.bar a{font-size:12px;text-decoration:none;padding:7px 16px;border:1px solid rgba(255,255,255,.15);border-radius:99px;color:#fafafa}
-.bar a.on{border-color:#FF6A00;color:#FF6A00}
+.bar a{font-size:12px;text-decoration:none;padding:7px 16px;border:1px solid rgba(255,255,255,.15);border-radius:99px;color:#fafafa}.bar a.on{border-color:#FF6A00;color:#FF6A00}
 .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;max-width:1240px;margin:0 auto}
 @media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:560px){.grid{grid-template-columns:1fr}}
 .card{position:relative;background:#000;border:1px solid rgba(255,255,255,.08);border-radius:12px;overflow:hidden;aspect-ratio:1.05}
-.card img{width:100%;height:100%;object-fit:contain}.card .no{position:absolute;top:9px;left:11px;font-size:9px;color:#8a8a93;letter-spacing:.08em;z-index:2}
+.card svg{width:100%;height:100%;display:block}.card .no{position:absolute;top:9px;left:11px;font-size:9px;color:#8a8a93;letter-spacing:.08em;z-index:2}
 </style></head><body>
-<div class="head"><h1>TIM<span class="g">BR</span> — Thin Geometric</h1><p>light geometric sans · wide spacing (matching your reference)</p></div>
-<div class="bar"><a href="final.html">FINAL</a><a href="fonts.html">SERIF FONTS</a><a href="fonts-thin.html" class="on">THIN SANS</a></div>
-<div class="grid">
-<div class="card"><span class="no"></span><img src="timbr-thin-.svg"></div>
-<div class="card"><span class="no">Jost Light</span><img src="timbr-thin-jost.svg"></div>
-<div class="card"><span class="no">Montserrat Light</span><img src="timbr-thin-montserrat.svg"></div>
-<div class="card"><span class="no">Outfit Light</span><img src="timbr-thin-outfit.svg"></div>
-<div class="card"><span class="no">Poppins Light</span><img src="timbr-thin-poppins.svg"></div>
-<div class="card"><span class="no">Raleway Light</span><img src="timbr-thin-raleway.svg"></div>
-<div class="card"><span class="no">Questrial</span><img src="timbr-thin-questrial.svg"></div>
-<div class="card"><span class="no">Josefin Light</span><img src="timbr-thin-josefin.svg"></div>
-<div class="card"><span class="no">Gruppo</span><img src="timbr-thin-gruppo.svg"></div>
-<div class="card"><span class="no">League Spartan</span><img src="timbr-thin-spartan.svg"></div>
-<div class="card"><span class="no">Didact Gothic</span><img src="timbr-thin-didact.svg"></div>
-<div class="card"><span class="no">Nunito Sans</span><img src="timbr-thin-nunito.svg"></div>
-</div></body></html>
+<div class="head"><h1>TIM<span class="g">BR</span> — Thin Geometric</h1><p>INLINE svg · fonts now actually apply</p></div>
+<div class="bar"><a href="final.html">FINAL</a><a href="fonts.html">SERIF</a><a href="fonts-thin.html" class="on">THIN SANS</a></div>
+<div class="grid"><div class="card"><span class="no">Jost Light</span><svg viewBox="0 0 2000 2000" xmlns="http://www.w3.org/2000/svg">
+  <defs><linearGradient id="fg" gradientUnits="userSpaceOnUse" x1="670" y1="0" x2="1330" y2="0"><stop offset="0" stop-color="#ff2f6d"/><stop offset="0.38" stop-color="#ff5a3d"/><stop offset="0.70" stop-color="#ff8a1f"/><stop offset="1" stop-color="#ffb000"/></linearGradient></defs><rect fill="#000000"/>
+  <g fill="none" stroke="url(#fg)" stroke-width="26" stroke-linejoin="round" stroke-linecap="round">
+    <polyline points="670,570 1000,390 1330,570"/>
+    <polygon points="670,570 670,720 820,805 820,1060 965,1130 965,720"/>
+    <polygon points="1330,570 1330,720 1180,805 1180,1060 1035,1130 1035,720"/>
+  </g>
+  <text x="1000" y="1440" text-anchor="middle" font-family="'Jost',sans-serif" font-weight="300" font-size="160" letter-spacing="120" fill="#ffffff" dx="60.0">TIMBR</text>
+</svg></div><div class="card"><span class="no">Montserrat Light</span><svg viewBox="0 0 2000 2000" xmlns="http://www.w3.org/2000/svg">
+  <defs><linearGradient id="fg" gradientUnits="userSpaceOnUse" x1="670" y1="0" x2="1330" y2="0"><stop offset="0" stop-color="#ff2f6d"/><stop offset="0.38" stop-color="#ff5a3d"/><stop offset="0.70" stop-color="#ff8a1f"/><stop offset="1" stop-color="#ffb000"/></linearGradient></defs><rect fill="#000000"/>
+  <g fill="none" stroke="url(#fg)" stroke-width="26" stroke-linejoin="round" stroke-linecap="round">
+    <polyline points="670,570 1000,390 1330,570"/>
+    <polygon points="670,570 670,720 820,805 820,1060 965,1130 965,720"/>
+    <polygon points="1330,570 1330,720 1180,805 1180,1060 1035,1130 1035,720"/>
+  </g>
+  <text x="1000" y="1440" text-anchor="middle" font-family="'Montserrat',sans-serif" font-weight="300" font-size="150" letter-spacing="118" fill="#ffffff" dx="59.0">TIMBR</text>
+</svg></div><div class="card"><span class="no">Outfit Light</span><svg viewBox="0 0 2000 2000" xmlns="http://www.w3.org/2000/svg">
+  <defs><linearGradient id="fg" gradientUnits="userSpaceOnUse" x1="670" y1="0" x2="1330" y2="0"><stop offset="0" stop-color="#ff2f6d"/><stop offset="0.38" stop-color="#ff5a3d"/><stop offset="0.70" stop-color="#ff8a1f"/><stop offset="1" stop-color="#ffb000"/></linearGradient></defs><rect fill="#000000"/>
+  <g fill="none" stroke="url(#fg)" stroke-width="26" stroke-linejoin="round" stroke-linecap="round">
+    <polyline points="670,570 1000,390 1330,570"/>
+    <polygon points="670,570 670,720 820,805 820,1060 965,1130 965,720"/>
+    <polygon points="1330,570 1330,720 1180,805 1180,1060 1035,1130 1035,720"/>
+  </g>
+  <text x="1000" y="1440" text-anchor="middle" font-family="'Outfit',sans-serif" font-weight="300" font-size="158" letter-spacing="120" fill="#ffffff" dx="60.0">TIMBR</text>
+</svg></div><div class="card"><span class="no">Poppins Light</span><svg viewBox="0 0 2000 2000" xmlns="http://www.w3.org/2000/svg">
+  <defs><linearGradient id="fg" gradientUnits="userSpaceOnUse" x1="670" y1="0" x2="1330" y2="0"><stop offset="0" stop-color="#ff2f6d"/><stop offset="0.38" stop-color="#ff5a3d"/><stop offset="0.70" stop-color="#ff8a1f"/><stop offset="1" stop-color="#ffb000"/></linearGradient></defs><rect fill="#000000"/>
+  <g fill="none" stroke="url(#fg)" stroke-width="26" stroke-linejoin="round" stroke-linecap="round">
+    <polyline points="670,570 1000,390 1330,570"/>
+    <polygon points="670,570 670,720 820,805 820,1060 965,1130 965,720"/>
+    <polygon points="1330,570 1330,720 1180,805 1180,1060 1035,1130 1035,720"/>
+  </g>
+  <text x="1000" y="1440" text-anchor="middle" font-family="'Poppins',sans-serif" font-weight="300" font-size="150" letter-spacing="116" fill="#ffffff" dx="58.0">TIMBR</text>
+</svg></div><div class="card"><span class="no">Raleway Light</span><svg viewBox="0 0 2000 2000" xmlns="http://www.w3.org/2000/svg">
+  <defs><linearGradient id="fg" gradientUnits="userSpaceOnUse" x1="670" y1="0" x2="1330" y2="0"><stop offset="0" stop-color="#ff2f6d"/><stop offset="0.38" stop-color="#ff5a3d"/><stop offset="0.70" stop-color="#ff8a1f"/><stop offset="1" stop-color="#ffb000"/></linearGradient></defs><rect fill="#000000"/>
+  <g fill="none" stroke="url(#fg)" stroke-width="26" stroke-linejoin="round" stroke-linecap="round">
+    <polyline points="670,570 1000,390 1330,570"/>
+    <polygon points="670,570 670,720 820,805 820,1060 965,1130 965,720"/>
+    <polygon points="1330,570 1330,720 1180,805 1180,1060 1035,1130 1035,720"/>
+  </g>
+  <text x="1000" y="1440" text-anchor="middle" font-family="'Raleway',sans-serif" font-weight="300" font-size="158" letter-spacing="120" fill="#ffffff" dx="60.0">TIMBR</text>
+</svg></div><div class="card"><span class="no">Questrial</span><svg viewBox="0 0 2000 2000" xmlns="http://www.w3.org/2000/svg">
+  <defs><linearGradient id="fg" gradientUnits="userSpaceOnUse" x1="670" y1="0" x2="1330" y2="0"><stop offset="0" stop-color="#ff2f6d"/><stop offset="0.38" stop-color="#ff5a3d"/><stop offset="0.70" stop-color="#ff8a1f"/><stop offset="1" stop-color="#ffb000"/></linearGradient></defs><rect fill="#000000"/>
+  <g fill="none" stroke="url(#fg)" stroke-width="26" stroke-linejoin="round" stroke-linecap="round">
+    <polyline points="670,570 1000,390 1330,570"/>
+    <polygon points="670,570 670,720 820,805 820,1060 965,1130 965,720"/>
+    <polygon points="1330,570 1330,720 1180,805 1180,1060 1035,1130 1035,720"/>
+  </g>
+  <text x="1000" y="1440" text-anchor="middle" font-family="'Questrial',sans-serif" font-weight="400" font-size="160" letter-spacing="120" fill="#ffffff" dx="60.0">TIMBR</text>
+</svg></div><div class="card"><span class="no">Josefin Light</span><svg viewBox="0 0 2000 2000" xmlns="http://www.w3.org/2000/svg">
+  <defs><linearGradient id="fg" gradientUnits="userSpaceOnUse" x1="670" y1="0" x2="1330" y2="0"><stop offset="0" stop-color="#ff2f6d"/><stop offset="0.38" stop-color="#ff5a3d"/><stop offset="0.70" stop-color="#ff8a1f"/><stop offset="1" stop-color="#ffb000"/></linearGradient></defs><rect fill="#000000"/>
+  <g fill="none" stroke="url(#fg)" stroke-width="26" stroke-linejoin="round" stroke-linecap="round">
+    <polyline points="670,570 1000,390 1330,570"/>
+    <polygon points="670,570 670,720 820,805 820,1060 965,1130 965,720"/>
+    <polygon points="1330,570 1330,720 1180,805 1180,1060 1035,1130 1035,720"/>
+  </g>
+  <text x="1000" y="1440" text-anchor="middle" font-family="'Josefin Sans',sans-serif" font-weight="300" font-size="165" letter-spacing="118" fill="#ffffff" dx="59.0">TIMBR</text>
+</svg></div><div class="card"><span class="no">Gruppo</span><svg viewBox="0 0 2000 2000" xmlns="http://www.w3.org/2000/svg">
+  <defs><linearGradient id="fg" gradientUnits="userSpaceOnUse" x1="670" y1="0" x2="1330" y2="0"><stop offset="0" stop-color="#ff2f6d"/><stop offset="0.38" stop-color="#ff5a3d"/><stop offset="0.70" stop-color="#ff8a1f"/><stop offset="1" stop-color="#ffb000"/></linearGradient></defs><rect fill="#000000"/>
+  <g fill="none" stroke="url(#fg)" stroke-width="26" stroke-linejoin="round" stroke-linecap="round">
+    <polyline points="670,570 1000,390 1330,570"/>
+    <polygon points="670,570 670,720 820,805 820,1060 965,1130 965,720"/>
+    <polygon points="1330,570 1330,720 1180,805 1180,1060 1035,1130 1035,720"/>
+  </g>
+  <text x="1000" y="1440" text-anchor="middle" font-family="'Gruppo',sans-serif" font-weight="400" font-size="170" letter-spacing="120" fill="#ffffff" dx="60.0">TIMBR</text>
+</svg></div><div class="card"><span class="no">League Spartan</span><svg viewBox="0 0 2000 2000" xmlns="http://www.w3.org/2000/svg">
+  <defs><linearGradient id="fg" gradientUnits="userSpaceOnUse" x1="670" y1="0" x2="1330" y2="0"><stop offset="0" stop-color="#ff2f6d"/><stop offset="0.38" stop-color="#ff5a3d"/><stop offset="0.70" stop-color="#ff8a1f"/><stop offset="1" stop-color="#ffb000"/></linearGradient></defs><rect fill="#000000"/>
+  <g fill="none" stroke="url(#fg)" stroke-width="26" stroke-linejoin="round" stroke-linecap="round">
+    <polyline points="670,570 1000,390 1330,570"/>
+    <polygon points="670,570 670,720 820,805 820,1060 965,1130 965,720"/>
+    <polygon points="1330,570 1330,720 1180,805 1180,1060 1035,1130 1035,720"/>
+  </g>
+  <text x="1000" y="1440" text-anchor="middle" font-family="'League Spartan',sans-serif" font-weight="300" font-size="150" letter-spacing="112" fill="#ffffff" dx="56.0">TIMBR</text>
+</svg></div><div class="card"><span class="no">Didact Gothic</span><svg viewBox="0 0 2000 2000" xmlns="http://www.w3.org/2000/svg">
+  <defs><linearGradient id="fg" gradientUnits="userSpaceOnUse" x1="670" y1="0" x2="1330" y2="0"><stop offset="0" stop-color="#ff2f6d"/><stop offset="0.38" stop-color="#ff5a3d"/><stop offset="0.70" stop-color="#ff8a1f"/><stop offset="1" stop-color="#ffb000"/></linearGradient></defs><rect fill="#000000"/>
+  <g fill="none" stroke="url(#fg)" stroke-width="26" stroke-linejoin="round" stroke-linecap="round">
+    <polyline points="670,570 1000,390 1330,570"/>
+    <polygon points="670,570 670,720 820,805 820,1060 965,1130 965,720"/>
+    <polygon points="1330,570 1330,720 1180,805 1180,1060 1035,1130 1035,720"/>
+  </g>
+  <text x="1000" y="1440" text-anchor="middle" font-family="'Didact Gothic',sans-serif" font-weight="400" font-size="158" letter-spacing="118" fill="#ffffff" dx="59.0">TIMBR</text>
+</svg></div><div class="card"><span class="no">Nunito Sans</span><svg viewBox="0 0 2000 2000" xmlns="http://www.w3.org/2000/svg">
+  <defs><linearGradient id="fg" gradientUnits="userSpaceOnUse" x1="670" y1="0" x2="1330" y2="0"><stop offset="0" stop-color="#ff2f6d"/><stop offset="0.38" stop-color="#ff5a3d"/><stop offset="0.70" stop-color="#ff8a1f"/><stop offset="1" stop-color="#ffb000"/></linearGradient></defs><rect fill="#000000"/>
+  <g fill="none" stroke="url(#fg)" stroke-width="26" stroke-linejoin="round" stroke-linecap="round">
+    <polyline points="670,570 1000,390 1330,570"/>
+    <polygon points="670,570 670,720 820,805 820,1060 965,1130 965,720"/>
+    <polygon points="1330,570 1330,720 1180,805 1180,1060 1035,1130 1035,720"/>
+  </g>
+  <text x="1000" y="1440" text-anchor="middle" font-family="'Nunito Sans',sans-serif" font-weight="300" font-size="156" letter-spacing="116" fill="#ffffff" dx="58.0">TIMBR</text>
+</svg></div><div class="card"><span class="no">Kanit Thin</span><svg viewBox="0 0 2000 2000" xmlns="http://www.w3.org/2000/svg">
+  <defs><linearGradient id="fg" gradientUnits="userSpaceOnUse" x1="670" y1="0" x2="1330" y2="0"><stop offset="0" stop-color="#ff2f6d"/><stop offset="0.38" stop-color="#ff5a3d"/><stop offset="0.70" stop-color="#ff8a1f"/><stop offset="1" stop-color="#ffb000"/></linearGradient></defs><rect fill="#000000"/>
+  <g fill="none" stroke="url(#fg)" stroke-width="26" stroke-linejoin="round" stroke-linecap="round">
+    <polyline points="670,570 1000,390 1330,570"/>
+    <polygon points="670,570 670,720 820,805 820,1060 965,1130 965,720"/>
+    <polygon points="1330,570 1330,720 1180,805 1180,1060 1035,1130 1035,720"/>
+  </g>
+  <text x="1000" y="1440" text-anchor="middle" font-family="'Kanit',sans-serif" font-weight="200" font-size="160" letter-spacing="118" fill="#ffffff" dx="59.0">TIMBR</text>
+</svg></div></div></body></html>
