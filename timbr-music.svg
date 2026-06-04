@@ -1,0 +1,43 @@
+<svg viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg" width="600" height="600">
+  <defs>
+    <linearGradient id="gm" gradientUnits="userSpaceOnUse" x1="95" y1="0" x2="505" y2="0">
+      <stop offset="0" stop-color="#FF2D6F"/><stop offset="0.35" stop-color="#FF466B"/><stop offset="0.6" stop-color="#FF5A2B"/><stop offset="1" stop-color="#FFB024"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="600" fill="#000"/>
+
+  <!-- ===== 3D isometric T symbol (front + depth + connectors) ===== -->
+  <g fill="none" stroke="url(#gm)" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">
+    <!-- front T -->
+    <polygon points="230,152 370,152 370,184 316,184 316,332 284,332 284,184 230,184"/>
+    <!-- back T (depth, offset up-right) -->
+    <polygon points="258,126 398,126 398,158 344,158 344,306 312,306 312,158 258,158" opacity="0.9"/>
+    <!-- connectors -->
+    <g><line x1="230" y1="152" x2="258" y2="126"/><line x1="370" y1="152" x2="398" y2="126"/><line x1="370" y1="184" x2="398" y2="158"/><line x1="316" y1="184" x2="344" y2="158"/><line x1="316" y1="332" x2="344" y2="306"/><line x1="284" y1="332" x2="312" y2="306"/></g>
+  </g>
+
+  <!-- ===== soundwave bars : left + right of the T ===== -->
+  <g fill="url(#gm)">
+    <!-- left cluster -->
+    <rect x="96"  y="300" width="7" height="40" rx="3.5"/>
+    <rect x="116" y="286" width="7" height="68" rx="3.5"/>
+    <rect x="136" y="262" width="7" height="116" rx="3.5"/>
+    <rect x="156" y="300" width="7" height="40" rx="3.5"/>
+    <rect x="176" y="276" width="7" height="88" rx="3.5"/>
+    <rect x="196" y="252" width="7" height="136" rx="3.5"/>
+    <rect x="216" y="294" width="7" height="52" rx="3.5"/>
+    <!-- right cluster (mirror) -->
+    <rect x="377" y="294" width="7" height="52" rx="3.5"/>
+    <rect x="397" y="252" width="7" height="136" rx="3.5"/>
+    <rect x="417" y="276" width="7" height="88" rx="3.5"/>
+    <rect x="437" y="300" width="7" height="40" rx="3.5"/>
+    <rect x="457" y="262" width="7" height="116" rx="3.5"/>
+    <rect x="477" y="286" width="7" height="68" rx="3.5"/>
+    <rect x="497" y="300" width="7" height="40" rx="3.5"/>
+  </g>
+
+  <!-- ===== wordmark ===== -->
+  <text x="300" y="492" text-anchor="middle" font-family="'Tinos','Times New Roman',serif" font-weight="700" font-size="78" letter-spacing="20" fill="#fafafa">TIMBR</text>
+  <line x1="150" y1="516" x2="450" y2="516" stroke="url(#gm)" stroke-width="2.5"/>
+  <text x="300" y="552" text-anchor="middle" font-family="'Jost',sans-serif" font-weight="300" font-size="24" letter-spacing="20" fill="#a6a6ad">MUSIC</text>
+</svg>
