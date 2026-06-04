@@ -12,8 +12,8 @@
 
   <!-- ===== isometric 3D letter T : three outline faces, no fill ===== -->
   <g fill="none" stroke="url(#tg)" stroke-width="26" stroke-linejoin="round" stroke-linecap="round">
-    <!-- top face -->
-    <polygon points="670,570 1000,390 1330,570 1060,720 940,720"/>
+    <!-- top face (open at center: no horizontal line between the stems) -->
+    <polyline points="670,570 1000,390 1330,570"/>
     <!-- left vertical face -->
     <polygon points="670,570 670,720 820,805 820,1060 940,1130 940,720"/>
     <!-- right vertical face -->
