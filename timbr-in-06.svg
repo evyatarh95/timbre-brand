@@ -1,0 +1,27 @@
+<svg viewBox="0 0 2000 2000" xmlns="http://www.w3.org/2000/svg" width="2000" height="2000">
+  <defs>
+    <linearGradient id="in6" gradientUnits="userSpaceOnUse" x1="670" y1="0" x2="1330" y2="0">
+      <stop offset="0" stop-color="#ff2f6d"/><stop offset="0.38" stop-color="#ff5a3d"/><stop offset="0.70" stop-color="#ff8a1f"/><stop offset="1" stop-color="#ffb000"/>
+    </linearGradient>
+  </defs>
+  <rect width="2000" height="2000" fill="#000000"/>
+  <!-- music element INSIDE the T body -->
+  <g fill="url(#in6)">
+    <circle cx="850" cy="918" r="9"/>
+    <circle cx="888" cy="900" r="10"/>
+    <circle cx="926" cy="878" r="11"/>
+    <circle cx="964" cy="856" r="12"/>
+    <circle cx="1002" cy="848" r="13"/>
+    <circle cx="1040" cy="856" r="12"/>
+    <circle cx="1078" cy="878" r="11"/>
+    <circle cx="1116" cy="900" r="10"/>
+    <circle cx="1154" cy="918" r="9"/>
+  </g>
+  <!-- core logo (unchanged) -->
+  <g fill="none" stroke="url(#in6)" stroke-width="26" stroke-linejoin="round" stroke-linecap="round">
+    <polyline points="670,570 1000,390 1330,570"/>
+    <polygon points="670,570 670,720 820,805 820,1060 965,1130 965,720"/>
+    <polygon points="1330,570 1330,720 1180,805 1180,1060 1035,1130 1035,720"/>
+  </g>
+  <text x="1000" y="1450" text-anchor="middle" font-family="'Playfair Display', Didot, serif" font-weight="500" font-size="200" letter-spacing="78" fill="#ffffff" dx="39">TIMBR</text>
+</svg>
