@@ -1,0 +1,9 @@
+<svg viewBox="0 0 2000 2000" xmlns="http://www.w3.org/2000/svg" width="2000" height="2000">
+  <defs><linearGradient id="fg" gradientUnits="userSpaceOnUse" x1="670" y1="0" x2="1330" y2="0"><stop offset="0" stop-color="#ff2f6d"/><stop offset="0.38" stop-color="#ff5a3d"/><stop offset="0.70" stop-color="#ff8a1f"/><stop offset="1" stop-color="#ffb000"/></linearGradient></defs><rect width="2000" height="2000" fill="#000000"/>
+  <g fill="none" stroke="url(#fg)" stroke-width="26" stroke-linejoin="round" stroke-linecap="round">
+    <polyline points="670,570 1000,390 1330,570"/>
+    <polygon points="670,570 670,720 820,805 820,1060 965,1130 965,720"/>
+    <polygon points="1330,570 1330,720 1180,805 1180,1060 1035,1130 1035,720"/>
+  </g>
+  <text x="1000" y="1450" text-anchor="middle" font-family="'Fraunces',serif" font-weight="500" font-size="198" letter-spacing="48" fill="#ffffff" dx="24.0">TIMBR</text>
+</svg>
