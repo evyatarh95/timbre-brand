@@ -1,179 +1,638 @@
 <!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TIMBR — Brand</title>
+<title>TIMBR — TIMBR Records</title>
 <link rel="icon" type="image/svg+xml" href="favicon.svg"><link rel="apple-touch-icon" href="apple-touch-icon.png">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Jost:wght@300;400;500&family=Anton&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 *{box-sizing:border-box;margin:0;padding:0;}
-:root{--bg:#05050a;--card:#0b0b10;}
-body{background:var(--bg);color:#fafafa;font-family:'Jost',sans-serif;}
-.topnav{position:sticky;top:0;z-index:99;display:flex;gap:9px;justify-content:center;flex-wrap:wrap;padding:12px;background:rgba(5,5,10,.9);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.08)}
-.topnav a{font-family:'JetBrains Mono',monospace;font-size:12px;text-decoration:none;padding:7px 16px;border:1px solid rgba(255,255,255,.15);border-radius:99px;color:#fafafa}
-.topnav a.on{border-color:#FF6A00;color:#FF6A00}
-section{max-width:1080px;margin:0 auto;padding:0 28px;}
-.kick{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:#FF6A00;text-align:center;margin-bottom:14px}
-h2.title{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:34px;letter-spacing:.04em;text-align:center;margin-bottom:6px}
-.lede{text-align:center;color:#9a9aa3;font-size:14px;font-weight:300;max-width:560px;margin:0 auto 40px;line-height:1.6}
-.rule{height:1px;width:300px;max-width:70%;margin:0 auto;background:linear-gradient(90deg,transparent,#FF5A2B,transparent)}
-
-/* HERO */
-.hero{text-align:center;padding:78px 28px 64px}
-.hero .mark{width:140px;height:140px;margin:0 auto 26px;display:block}
-.hero h1{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:84px;letter-spacing:.2em;text-indent:.2em;line-height:1}
-.hero .tag{font-weight:300;font-size:15px;letter-spacing:.4em;text-indent:.4em;text-transform:uppercase;color:#cfcfd6;margin:18px 0 22px}
-
-.block{padding:70px 0;border-top:1px solid rgba(255,255,255,.06)}
-.grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:8px}
-.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:8px}
-@media(max-width:760px){.grid2,.grid3{grid-template-columns:1fr}}
-.panel{background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:34px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;min-height:200px}
-.panel.light{background:#f3efe9}
-.panel .cap{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.14em;color:#6a6a73;text-transform:uppercase}
-.panel.light .cap{color:#a89c8c}
-.sizes{display:flex;align-items:flex-end;gap:22px}
-.sizes figure{text-align:center}.sizes figcaption{font-family:'JetBrains Mono',monospace;font-size:9px;color:#6a6a73;margin-top:6px}
-
-/* wordmark lockups */
-.wm{font-family:'Cormorant Garamond',serif;font-weight:500;letter-spacing:.18em;text-indent:.18em;color:#fafafa}
-.sfx{font-family:'Jost',sans-serif;font-weight:300;font-size:12px;letter-spacing:.46em;text-indent:.46em;color:#b8b8c0;text-transform:uppercase}
-.lockH{display:flex;align-items:center;gap:20px}
-.lockH .wm{font-size:46px}
-.lockV{display:flex;flex-direction:column;align-items:center;gap:12px}
-.lockV .wm{font-size:40px}
-
-/* color + type */
-.swatches{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:8px}
-@media(max-width:760px){.swatches{grid-template-columns:repeat(2,1fr)}}
-.sw{border-radius:12px;height:96px;display:flex;align-items:flex-end;padding:12px;font-family:'JetBrains Mono',monospace;font-size:11px;color:#fff;border:1px solid rgba(255,255,255,.08)}
-.type{background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:30px;margin-top:8px}
-.type .row{display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid rgba(255,255,255,.06);padding:16px 0}
-.type .row:last-child{border-bottom:none}
-.type .lbl{font-family:'JetBrains Mono',monospace;font-size:11px;color:#6a6a73}
-
-/* mockups */
-.phone{width:200px;height:200px;border-radius:44px;background:linear-gradient(135deg,#1a1a22,#0a0a0c);display:flex;align-items:center;justify-content:center;border:1px solid rgba(255,255,255,.1);box-shadow:0 30px 60px rgba(0,0,0,.5)}
-.card-bc{width:300px;height:180px;border-radius:12px;background:linear-gradient(135deg,#0c0c12,#08080c);border:1px solid rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;box-shadow:0 24px 50px rgba(0,0,0,.5)}
-.vinyl{width:210px;height:210px;border-radius:50%;background:repeating-radial-gradient(circle at center,#0a0a0c 0 3px,#111118 3px 5px);display:flex;align-items:center;justify-content:center;box-shadow:0 24px 50px rgba(0,0,0,.6)}
-.vlabel{width:96px;height:96px;border-radius:50%;display:flex;align-items:center;justify-content:center}
-.foot{text-align:center;padding:60px 0 90px;font-family:'JetBrains Mono',monospace;font-size:11px;color:#5a5a63;letter-spacing:.1em}
+body{background:#000;color:#fafafa;font-family:'Jost',sans-serif;}
+.topnav{position:sticky;top:0;z-index:99;display:flex;gap:8px;justify-content:center;flex-wrap:wrap;padding:12px;background:rgba(0,0,0,.9);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.08)}
+.head{text-align:center;max-width:760px;margin:46px auto 14px;}
+.wavemark{display:flex;gap:3px;justify-content:center;align-items:flex-end;height:30px;margin-bottom:14px;}
+.wavemark i{width:2.5px;border-radius:2px;background:linear-gradient(#FF3D7F,#FF8A1F);display:block;}
+.head h1{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:60px;letter-spacing:.22em;text-indent:.22em;line-height:1;}
+.head .sub{font-weight:300;font-size:13px;letter-spacing:.4em;text-indent:.4em;color:#cfcfd6;margin:16px 0 14px;text-transform:uppercase;}
+.rule{height:1px;width:320px;max-width:78%;margin:0 auto;background:linear-gradient(90deg,transparent,#FF5A2B,transparent);}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;max-width:1080px;margin:34px auto 0;padding:0 26px;}
+@media(max-width:680px){.grid{grid-template-columns:1fr;}}
+.card{position:relative;background:#000;border:1px solid rgba(255,255,255,.08);border-radius:6px;padding:30px 24px;display:flex;align-items:center;justify-content:center;min-height:250px;transition:border-color .2s;}
+.card:hover{border-color:rgba(255,90,43,.5);}
+.card .no{position:absolute;top:12px;left:14px;font-family:'JetBrains Mono',monospace;font-size:12px;color:#6a6a73;}
+.card svg.logo{width:100%;height:auto;max-height:220px;}
+.foot{text-align:center;margin:48px 0 80px;font-family:'JetBrains Mono',monospace;font-size:11px;color:#5a5a63;letter-spacing:.1em}
 </style></head><body>
-<div class="topnav"><a href="index.html" class="on">BRAND</a><a href="play.html">PLAY ✦</a><a href="symbols.html">MUSIC SYMBOLS</a><a href="ten.html">10 LOGOS</a><a href="lineart.html">LINE-ART</a><a href="bold.html">BOLD</a><a href="favicon.html">FAVICONS</a></div>
+<div class="head"><div class="wavemark"><i style="height:10px"></i><i style="height:18px"></i><i style="height:26px"></i><i style="height:14px"></i><i style="height:30px"></i><i style="height:20px"></i><i style="height:12px"></i><i style="height:24px"></i><i style="height:16px"></i></div>
+<h1>TIMBR</h1><div class="sub">the 3D T — music inside</div><div class="rule"></div></div>
+<div class="grid"><div class="card"><span class="no">01</span><svg class="logo" viewBox="0 0 380 260" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="tm1g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FF3D7F"/><stop offset=".55" stop-color="#FF5A2B"/><stop offset="1" stop-color="#FF8A1F"/></linearGradient>
+    <clipPath id="tm1c"><polygon points="146,46 234,46 234,66 206,66 206,150 174,150 174,66 146,66"/></clipPath>
+  </defs>
+  <g transform="translate(15,-12)" opacity="0.45"><polygon points="146,46 234,46 234,66 206,66 206,150 174,150 174,66 146,66" fill="none" stroke="url(#tm1g)" stroke-width="2"/></g>
+  <g stroke="url(#tm1g)" stroke-width="2" opacity="0.45"><line x1="146" y1="46" x2="161" y2="34"/><line x1="234" y1="46" x2="249" y2="34"/><line x1="234" y1="66" x2="249" y2="54"/><line x1="206" y1="150" x2="221" y2="138"/><line x1="174" y1="150" x2="189" y2="138"/></g>
+  <g clip-path="url(#tm1c)"><path d="M148,98 C156,98 158,72 166,72 C174,72 176,124 184,124 C192,124 194,58 202,58 C210,58 212,110 220,110 C226,110 228,90 232,90" fill="none" stroke="url(#tm1g)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <polygon points="146,46 234,46 234,66 206,66 206,150 174,150 174,66 146,66" fill="none" stroke="url(#tm1g)" stroke-width="3"/>
+  <text x="190" y="200" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-weight="500" font-size="40" letter-spacing="14" fill="#fafafa">TIMBR</text>
+  <line x1="120" y1="216" x2="260" y2="216" stroke="url(#tm1g)" stroke-width="1.5"/>
+  <text x="190" y="234" text-anchor="middle" font-family="'Jost',sans-serif" font-weight="300" font-size="11" letter-spacing="9" fill="#b8b8c0">RECORDS</text>
+</svg></div><div class="card"><span class="no">02</span><svg class="logo" viewBox="0 0 380 260" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="tm2g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FF3D7F"/><stop offset=".55" stop-color="#FF5A2B"/><stop offset="1" stop-color="#FF8A1F"/></linearGradient>
+    <clipPath id="tm2c"><polygon points="146,46 234,46 234,66 206,66 206,150 174,150 174,66 146,66"/></clipPath>
+  </defs>
+  <g transform="translate(15,-12)" opacity="0.45"><polygon points="146,46 234,46 234,66 206,66 206,150 174,150 174,66 146,66" fill="none" stroke="url(#tm2g)" stroke-width="2"/></g>
+  <g stroke="url(#tm2g)" stroke-width="2" opacity="0.45"><line x1="146" y1="46" x2="161" y2="34"/><line x1="234" y1="46" x2="249" y2="34"/><line x1="234" y1="66" x2="249" y2="54"/><line x1="206" y1="150" x2="221" y2="138"/><line x1="174" y1="150" x2="189" y2="138"/></g>
+  <g clip-path="url(#tm2c)"><g stroke="url(#tm2g)" stroke-width="2" stroke-linecap="round">
+    <line x1="150" y1="74" x2="150" y2="82"/>
+    <line x1="154" y1="68" x2="154" y2="88"/>
+    <line x1="158" y1="60" x2="158" y2="96"/>
+    <line x1="162" y1="66" x2="162" y2="90"/>
+    <line x1="166" y1="56" x2="166" y2="100"/>
+    <line x1="170" y1="62" x2="170" y2="94"/>
+    <line x1="174" y1="52" x2="174" y2="146"/>
+    <line x1="178" y1="58" x2="178" y2="140"/>
+    <line x1="182" y1="48" x2="182" y2="148"/>
+    <line x1="186" y1="64" x2="186" y2="132"/>
+    <line x1="190" y1="50" x2="190" y2="148"/>
+    <line x1="194" y1="60" x2="194" y2="138"/>
+    <line x1="198" y1="48" x2="198" y2="148"/>
+    <line x1="202" y1="56" x2="202" y2="142"/>
+    <line x1="206" y1="54" x2="206" y2="146"/>
+    <line x1="210" y1="62" x2="210" y2="94"/>
+    <line x1="214" y1="56" x2="214" y2="100"/>
+    <line x1="218" y1="66" x2="218" y2="90"/>
+    <line x1="222" y1="60" x2="222" y2="96"/>
+    <line x1="226" y1="68" x2="226" y2="88"/>
+    <line x1="230" y1="74" x2="230" y2="82"/>
+  </g></g>
+  <polygon points="146,46 234,46 234,66 206,66 206,150 174,150 174,66 146,66" fill="none" stroke="url(#tm2g)" stroke-width="3"/>
+  <text x="190" y="200" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-weight="500" font-size="40" letter-spacing="14" fill="#fafafa">TIMBR</text>
+  <line x1="120" y1="216" x2="260" y2="216" stroke="url(#tm2g)" stroke-width="1.5"/>
+  <text x="190" y="234" text-anchor="middle" font-family="'Jost',sans-serif" font-weight="300" font-size="11" letter-spacing="9" fill="#b8b8c0">RECORDS</text>
+</svg></div><div class="card"><span class="no">03</span><svg class="logo" viewBox="0 0 380 260" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="tm3g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FF3D7F"/><stop offset=".55" stop-color="#FF5A2B"/><stop offset="1" stop-color="#FF8A1F"/></linearGradient>
+    <clipPath id="tm3c"><polygon points="146,46 234,46 234,66 206,66 206,150 174,150 174,66 146,66"/></clipPath>
+  </defs>
+  <g transform="translate(15,-12)" opacity="0.45"><polygon points="146,46 234,46 234,66 206,66 206,150 174,150 174,66 146,66" fill="none" stroke="url(#tm3g)" stroke-width="2"/></g>
+  <g stroke="url(#tm3g)" stroke-width="2" opacity="0.45"><line x1="146" y1="46" x2="161" y2="34"/><line x1="234" y1="46" x2="249" y2="34"/><line x1="234" y1="66" x2="249" y2="54"/><line x1="206" y1="150" x2="221" y2="138"/><line x1="174" y1="150" x2="189" y2="138"/></g>
+  <g clip-path="url(#tm3c)"><g stroke="url(#tm3g)" stroke-width="5" stroke-linecap="round"><line x1="156" y1="116" x2="156" y2="128"/><line x1="166" y1="106" x2="166" y2="128"/><line x1="176" y1="94" x2="176" y2="128"/><line x1="186" y1="78" x2="186" y2="128"/><line x1="196" y1="64" x2="196" y2="128"/><line x1="206" y1="84" x2="206" y2="128"/><line x1="216" y1="100" x2="216" y2="128"/><line x1="226" y1="112" x2="226" y2="128"/></g></g>
+  <polygon points="146,46 234,46 234,66 206,66 206,150 174,150 174,66 146,66" fill="none" stroke="url(#tm3g)" stroke-width="3"/>
+  <text x="190" y="200" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-weight="500" font-size="40" letter-spacing="14" fill="#fafafa">TIMBR</text>
+  <line x1="120" y1="216" x2="260" y2="216" stroke="url(#tm3g)" stroke-width="1.5"/>
+  <text x="190" y="234" text-anchor="middle" font-family="'Jost',sans-serif" font-weight="300" font-size="11" letter-spacing="9" fill="#b8b8c0">RECORDS</text>
+</svg></div><div class="card"><span class="no">04</span><svg class="logo" viewBox="0 0 380 260" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="tm4g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FF3D7F"/><stop offset=".55" stop-color="#FF5A2B"/><stop offset="1" stop-color="#FF8A1F"/></linearGradient>
+    <clipPath id="tm4c"><polygon points="146,46 234,46 234,66 206,66 206,150 174,150 174,66 146,66"/></clipPath>
+  </defs>
+  <g transform="translate(15,-12)" opacity="0.45"><polygon points="146,46 234,46 234,66 206,66 206,150 174,150 174,66 146,66" fill="none" stroke="url(#tm4g)" stroke-width="2"/></g>
+  <g stroke="url(#tm4g)" stroke-width="2" opacity="0.45"><line x1="146" y1="46" x2="161" y2="34"/><line x1="234" y1="46" x2="249" y2="34"/><line x1="234" y1="66" x2="249" y2="54"/><line x1="206" y1="150" x2="221" y2="138"/><line x1="174" y1="150" x2="189" y2="138"/></g>
+  <g clip-path="url(#tm4c)"><path d="M150,98 C162,60 174,60 186,98 C198,136 210,136 222,98 C228,79 232,72 236,72" fill="none" stroke="url(#tm4g)" stroke-width="6" stroke-linecap="round"/></g>
+  <polygon points="146,46 234,46 234,66 206,66 206,150 174,150 174,66 146,66" fill="none" stroke="url(#tm4g)" stroke-width="3"/>
+  <text x="190" y="200" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-weight="500" font-size="40" letter-spacing="14" fill="#fafafa">TIMBR</text>
+  <line x1="120" y1="216" x2="260" y2="216" stroke="url(#tm4g)" stroke-width="1.5"/>
+  <text x="190" y="234" text-anchor="middle" font-family="'Jost',sans-serif" font-weight="300" font-size="11" letter-spacing="9" fill="#b8b8c0">RECORDS</text>
+</svg></div><div class="card"><span class="no">05</span><svg class="logo" viewBox="0 0 380 260" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="tm5g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FF3D7F"/><stop offset=".55" stop-color="#FF5A2B"/><stop offset="1" stop-color="#FF8A1F"/></linearGradient>
+    <clipPath id="tm5c"><polygon points="146,46 234,46 234,66 206,66 206,150 174,150 174,66 146,66"/></clipPath>
+  </defs>
+  <g transform="translate(15,-12)" opacity="0.45"><polygon points="146,46 234,46 234,66 206,66 206,150 174,150 174,66 146,66" fill="none" stroke="url(#tm5g)" stroke-width="2"/></g>
+  <g stroke="url(#tm5g)" stroke-width="2" opacity="0.45"><line x1="146" y1="46" x2="161" y2="34"/><line x1="234" y1="46" x2="249" y2="34"/><line x1="234" y1="66" x2="249" y2="54"/><line x1="206" y1="150" x2="221" y2="138"/><line x1="174" y1="150" x2="189" y2="138"/></g>
+  <g clip-path="url(#tm5c)">
+    <g fill="none" stroke="url(#tm5g)" stroke-width="1.4" opacity="0.9">
+      <circle cx="190" cy="90" r="46"/>
+      <circle cx="190" cy="90" r="40"/>
+      <circle cx="190" cy="90" r="34"/>
+      <circle cx="190" cy="90" r="28"/>
+      <circle cx="190" cy="90" r="22"/>
+    </g>
+    <circle cx="190" cy="90" r="14" fill="none" stroke="#fafafa" stroke-width="1.6" opacity="0.85"/>
+    <circle cx="190" cy="90" r="4.5" fill="#FF6A00"/>
+  </g>
+  <polygon points="146,46 234,46 234,66 206,66 206,150 174,150 174,66 146,66" fill="none" stroke="url(#tm5g)" stroke-width="3"/>
+  <text x="190" y="200" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-weight="500" font-size="40" letter-spacing="14" fill="#fafafa">TIMBR</text>
+  <line x1="120" y1="216" x2="260" y2="216" stroke="url(#tm5g)" stroke-width="1.5"/>
+  <text x="190" y="234" text-anchor="middle" font-family="'Jost',sans-serif" font-weight="300" font-size="11" letter-spacing="9" fill="#b8b8c0">RECORDS</text>
+</svg></div><div class="card"><span class="no">06</span><svg class="logo" viewBox="0 0 380 260" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="tm6g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FF3D7F"/><stop offset=".55" stop-color="#FF5A2B"/><stop offset="1" stop-color="#FF8A1F"/></linearGradient>
+    <clipPath id="tm6c"><polygon points="146,46 234,46 234,66 206,66 206,150 174,150 174,66 146,66"/></clipPath>
+  </defs>
+  <g transform="translate(15,-12)" opacity="0.45"><polygon points="146,46 234,46 234,66 206,66 206,150 174,150 174,66 146,66" fill="none" stroke="url(#tm6g)" stroke-width="2"/></g>
+  <g stroke="url(#tm6g)" stroke-width="2" opacity="0.45"><line x1="146" y1="46" x2="161" y2="34"/><line x1="234" y1="46" x2="249" y2="34"/><line x1="234" y1="66" x2="249" y2="54"/><line x1="206" y1="150" x2="221" y2="138"/><line x1="174" y1="150" x2="189" y2="138"/></g>
+  <g clip-path="url(#tm6c)"><g fill="url(#tm6g)">
+    <circle cx="152" cy="56" r="1.6"/><circle cx="152" cy="56" r="1.6"/>
+    <circle cx="160" cy="56" r="2.2"/>
+    <circle cx="168" cy="56" r="3"/>
+    <circle cx="176" cy="56" r="2.4"/>
+    <circle cx="184" cy="56" r="3.4"/>
+    <circle cx="192" cy="56" r="2.4"/>
+    <circle cx="200" cy="56" r="3"/>
+    <circle cx="208" cy="56" r="2.2"/>
+    <circle cx="216" cy="56" r="3"/>
+    <circle cx="224" cy="56" r="2"/>
+    <circle cx="232" cy="56" r="1.6"/>
 
-<!-- ============ HERO ============ -->
-<div class="hero">
-  <svg class="mark" viewBox="0 0 120 120" aria-label="TIMBR mark">
-    <defs><linearGradient id="hm" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FF3D7F"/><stop offset=".55" stop-color="#FF5A2B"/><stop offset="1" stop-color="#FF8A1F"/></linearGradient></defs>
-    <path d="M22 46 C40 24 52 24 60 42 C68 60 80 60 98 38" fill="none" stroke="url(#hm)" stroke-width="12" stroke-linecap="round"/>
-    <rect x="53" y="46" width="14" height="54" rx="7" fill="url(#hm)"/>
-  </svg>
-  <h1>TIMBR</h1>
-  <div class="tag">Sound, with character</div>
-  <div class="rule"></div>
-</div>
+    <circle cx="182" cy="74" r="2.6"/>
+    <circle cx="190" cy="74" r="3.6"/>
+    <circle cx="198" cy="74" r="2.6"/>
 
-<!-- ============ THE MARK ============ -->
-<section class="block">
-  <div class="kick">The Mark</div>
-  <h2 class="title">A “T” drawn from a wave</h2>
-  <p class="lede">The stem is the letter; the crest is the sound. One gesture that reads as TIMBR at any size, in any medium — the timbre of a sound made visible.</p>
-  <div class="grid2">
-    <div class="panel">
-      <svg viewBox="0 0 120 120" style="width:120px;height:120px"><defs><linearGradient id="m1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FF3D7F"/><stop offset=".55" stop-color="#FF5A2B"/><stop offset="1" stop-color="#FF8A1F"/></linearGradient></defs><path d="M22 46 C40 24 52 24 60 42 C68 60 80 60 98 38" fill="none" stroke="url(#m1)" stroke-width="12" stroke-linecap="round"/><rect x="53" y="46" width="14" height="54" rx="7" fill="url(#m1)"/></svg>
-      <span class="cap">Primary · gradient on dark</span>
-    </div>
-    <div class="panel light">
-      <svg viewBox="0 0 120 120" style="width:120px;height:120px"><path d="M22 46 C40 24 52 24 60 42 C68 60 80 60 98 38" fill="none" stroke="#0a0a0c" stroke-width="12" stroke-linecap="round"/><rect x="53" y="46" width="14" height="54" rx="7" fill="#0a0a0c"/></svg>
-      <span class="cap">Mono · on light</span>
-    </div>
-  </div>
-  <div class="grid2" style="margin-top:18px">
-    <div class="panel">
-      <div class="sizes">
-        <figure><svg viewBox="0 0 120 120" style="width:64px;height:64px"><defs><linearGradient id="m2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FF3D7F"/><stop offset=".55" stop-color="#FF5A2B"/><stop offset="1" stop-color="#FF8A1F"/></linearGradient></defs><path d="M22 46 C40 24 52 24 60 42 C68 60 80 60 98 38" fill="none" stroke="url(#m2)" stroke-width="12" stroke-linecap="round"/><rect x="53" y="46" width="14" height="54" rx="7" fill="url(#m2)"/></svg><figcaption>64</figcaption></figure>
-        <figure><svg viewBox="0 0 120 120" style="width:32px;height:32px"><path d="M22 46 C40 24 52 24 60 42 C68 60 80 60 98 38" fill="none" stroke="#FF6A00" stroke-width="13" stroke-linecap="round"/><rect x="53" y="46" width="14" height="54" rx="7" fill="#FF6A00"/></svg><figcaption>32</figcaption></figure>
-        <figure><svg viewBox="0 0 120 120" style="width:16px;height:16px"><path d="M22 46 C40 24 52 24 60 42 C68 60 80 60 98 38" fill="none" stroke="#FF6A00" stroke-width="15" stroke-linecap="round"/><rect x="52" y="46" width="16" height="54" rx="8" fill="#FF6A00"/></svg><figcaption>16</figcaption></figure>
-      </div>
-      <span class="cap">Scales to favicon</span>
-    </div>
-    <div class="panel">
-      <svg viewBox="0 0 120 120" style="width:96px;height:96px"><defs><linearGradient id="m3" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FF3D7F"/><stop offset="1" stop-color="#FF8A1F"/></linearGradient></defs><rect x="6" y="6" width="108" height="108" rx="26" fill="url(#m3)"/><path d="M30 52 C46 34 56 34 63 49 C70 64 80 64 95 46" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round"/><rect x="57" y="52" width="11" height="44" rx="5.5" fill="#fff"/></svg>
-      <span class="cap">App icon · gradient tile</span>
-    </div>
-  </div>
-</section>
+    <circle cx="182" cy="86" r="2"/>
+    <circle cx="190" cy="86" r="3"/>
+    <circle cx="198" cy="86" r="2"/>
 
-<!-- ============ LOCKUPS ============ -->
-<section class="block">
-  <div class="kick">Primary Lockups</div>
-  <h2 class="title">Horizontal &amp; stacked</h2>
-  <p class="lede">The mark leads, the wordmark follows in an elegant high-contrast serif with generous tracking — confident, editorial, premium.</p>
-  <div class="grid2">
-    <div class="panel">
-      <div class="lockH">
-        <svg viewBox="0 0 120 120" style="width:70px;height:70px"><defs><linearGradient id="lh" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FF3D7F"/><stop offset=".55" stop-color="#FF5A2B"/><stop offset="1" stop-color="#FF8A1F"/></linearGradient></defs><path d="M22 46 C40 24 52 24 60 42 C68 60 80 60 98 38" fill="none" stroke="url(#lh)" stroke-width="12" stroke-linecap="round"/><rect x="53" y="46" width="14" height="54" rx="7" fill="url(#lh)"/></svg>
-        <span class="wm">TIMBR</span>
-      </div>
-      <span class="cap">Horizontal · headers, web</span>
-    </div>
-    <div class="panel">
-      <div class="lockV">
-        <svg viewBox="0 0 120 120" style="width:62px;height:62px"><defs><linearGradient id="lv" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FF3D7F"/><stop offset=".55" stop-color="#FF5A2B"/><stop offset="1" stop-color="#FF8A1F"/></linearGradient></defs><path d="M22 46 C40 24 52 24 60 42 C68 60 80 60 98 38" fill="none" stroke="url(#lv)" stroke-width="12" stroke-linecap="round"/><rect x="53" y="46" width="14" height="54" rx="7" fill="url(#lv)"/></svg>
-        <span class="wm">TIMBR</span>
-      </div>
-      <span class="cap">Stacked · social, app</span>
-    </div>
-  </div>
-</section>
+    <circle cx="182" cy="98" r="2.8"/>
+    <circle cx="190" cy="98" r="4"/>
+    <circle cx="198" cy="98" r="2.8"/>
 
-<!-- ============ FAMILY ============ -->
-<section class="block">
-  <div class="kick">One Ecosystem</div>
-  <h2 class="title">The family</h2>
-  <p class="lede">One mark, one wordmark — only the division name changes. Master, Records, and Radio stay unmistakably the same brand.</p>
-  <div class="grid3">
-    <div class="panel"><div class="lockV"><svg viewBox="0 0 120 120" style="width:54px;height:54px"><defs><linearGradient id="f1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FF3D7F"/><stop offset=".55" stop-color="#FF5A2B"/><stop offset="1" stop-color="#FF8A1F"/></linearGradient></defs><path d="M22 46 C40 24 52 24 60 42 C68 60 80 60 98 38" fill="none" stroke="url(#f1)" stroke-width="12" stroke-linecap="round"/><rect x="53" y="46" width="14" height="54" rx="7" fill="url(#f1)"/></svg><span class="wm" style="font-size:30px">TIMBR</span></div><span class="cap">Master brand</span></div>
-    <div class="panel"><div class="lockV"><svg viewBox="0 0 120 120" style="width:54px;height:54px"><defs><linearGradient id="f2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FF3D7F"/><stop offset=".55" stop-color="#FF5A2B"/><stop offset="1" stop-color="#FF8A1F"/></linearGradient></defs><path d="M22 46 C40 24 52 24 60 42 C68 60 80 60 98 38" fill="none" stroke="url(#f2)" stroke-width="12" stroke-linecap="round"/><rect x="53" y="46" width="14" height="54" rx="7" fill="url(#f2)"/></svg><span class="wm" style="font-size:30px">TIMBR</span><span class="sfx">Records</span></div><span class="cap">Label division</span></div>
-    <div class="panel"><div class="lockV"><svg viewBox="0 0 120 120" style="width:54px;height:54px"><defs><linearGradient id="f3" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FF3D7F"/><stop offset=".55" stop-color="#FF5A2B"/><stop offset="1" stop-color="#FF8A1F"/></linearGradient></defs><path d="M22 46 C40 24 52 24 60 42 C68 60 80 60 98 38" fill="none" stroke="url(#f3)" stroke-width="12" stroke-linecap="round"/><rect x="53" y="46" width="14" height="54" rx="7" fill="url(#f3)"/></svg><span class="wm" style="font-size:30px">TIMBR</span><span class="sfx">Radio</span></div><span class="cap">Radio · discovery</span></div>
-  </div>
-</section>
+    <circle cx="182" cy="110" r="2"/>
+    <circle cx="190" cy="110" r="3.2"/>
+    <circle cx="198" cy="110" r="2"/>
 
-<!-- ============ COLOR + TYPE ============ -->
-<section class="block">
-  <div class="kick">Color &amp; Type</div>
-  <h2 class="title">Sunset system</h2>
-  <p class="lede">The inherited BETTER RADIO sunset gradient, on near-black. Cormorant Garamond for the wordmark, Jost for UI, JetBrains Mono for technical labels.</p>
-  <div class="swatches">
-    <div class="sw" style="background:linear-gradient(135deg,#FF3D7F,#FF5A2B 55%,#FF8A1F)">Sunset gradient</div>
-    <div class="sw" style="background:#FF6A00">#FF6A00 accent</div>
-    <div class="sw" style="background:#05050a">#05050a bg</div>
-    <div class="sw" style="background:#0b0b10">#0b0b10 card</div>
-  </div>
-  <div class="type">
-    <div class="row"><span class="wm" style="font-size:34px">TIMBR</span><span class="lbl">Cormorant Garamond · wordmark</span></div>
-    <div class="row"><span style="font-family:'Jost';font-weight:300;font-size:26px;letter-spacing:.02em">Discover the sound</span><span class="lbl">Jost · UI / body</span></div>
-    <div class="row"><span style="font-family:'JetBrains Mono';font-size:18px;letter-spacing:.1em">TIMBR · 00:00 / FM</span><span class="lbl">JetBrains Mono · technical</span></div>
-  </div>
-</section>
+    <circle cx="182" cy="122" r="2.6"/>
+    <circle cx="190" cy="122" r="3.6"/>
+    <circle cx="198" cy="122" r="2.6"/>
 
-<!-- ============ MOCKUPS ============ -->
-<section class="block">
-  <div class="kick">In the wild</div>
-  <h2 class="title">Applied</h2>
-  <p class="lede">The identity across the touchpoints it will actually live on.</p>
-  <div class="grid3">
-    <div class="panel">
-      <div class="phone"><svg viewBox="0 0 120 120" style="width:104px;height:104px"><defs><linearGradient id="ap" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FF3D7F"/><stop offset="1" stop-color="#FF8A1F"/></linearGradient></defs><rect x="6" y="6" width="108" height="108" rx="26" fill="url(#ap)"/><path d="M30 52 C46 34 56 34 63 49 C70 64 80 64 95 46" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round"/><rect x="57" y="52" width="11" height="44" rx="5.5" fill="#fff"/></svg></div>
-      <span class="cap">App icon</span>
-    </div>
-    <div class="panel">
-      <div class="card-bc"><div class="lockH" style="gap:14px"><svg viewBox="0 0 120 120" style="width:44px;height:44px"><defs><linearGradient id="bc" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FF3D7F"/><stop offset=".55" stop-color="#FF5A2B"/><stop offset="1" stop-color="#FF8A1F"/></linearGradient></defs><path d="M22 46 C40 24 52 24 60 42 C68 60 80 60 98 38" fill="none" stroke="url(#bc)" stroke-width="12" stroke-linecap="round"/><rect x="53" y="46" width="14" height="54" rx="7" fill="url(#bc)"/></svg><span class="wm" style="font-size:28px">TIMBR</span></div></div>
-      <span class="cap">Business card</span>
-    </div>
-    <div class="panel">
-      <div class="vinyl"><div class="vlabel" style="background:linear-gradient(135deg,#FF3D7F,#FF8A1F)"><svg viewBox="0 0 120 120" style="width:52px;height:52px"><path d="M22 46 C40 24 52 24 60 42 C68 60 80 60 98 38" fill="none" stroke="#fff" stroke-width="11" stroke-linecap="round"/><rect x="53" y="46" width="14" height="54" rx="7" fill="#fff"/></svg></div></div>
-      <span class="cap">Vinyl center label</span>
-    </div>
-  </div>
-</section>
+    <circle cx="182" cy="134" r="1.8"/>
+    <circle cx="190" cy="134" r="2.6"/>
+    <circle cx="198" cy="134" r="1.8"/>
 
-<div class="foot">TIMBR — definitive direction · sunset gradient #FF3D7F → #FF8A1F · one mark, one family</div>
-</body></html>
+    <circle cx="190" cy="146" r="2"/>
+  </g></g>
+  <polygon points="146,46 234,46 234,66 206,66 206,150 174,150 174,66 146,66" fill="none" stroke="url(#tm6g)" stroke-width="3"/>
+  <text x="190" y="200" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-weight="500" font-size="40" letter-spacing="14" fill="#fafafa">TIMBR</text>
+  <line x1="120" y1="216" x2="260" y2="216" stroke="url(#tm6g)" stroke-width="1.5"/>
+  <text x="190" y="234" text-anchor="middle" font-family="'Jost',sans-serif" font-weight="300" font-size="11" letter-spacing="9" fill="#b8b8c0">RECORDS</text>
+</svg></div><div class="card"><span class="no">07</span><svg class="logo" viewBox="0 0 380 260" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="tm7g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FF3D7F"/><stop offset=".55" stop-color="#FF5A2B"/><stop offset="1" stop-color="#FF8A1F"/></linearGradient>
+    <clipPath id="tm7c"><polygon points="146,46 234,46 234,66 206,66 206,150 174,150 174,66 146,66"/></clipPath>
+  </defs>
+  <g transform="translate(15,-12)" opacity="0.45"><polygon points="146,46 234,46 234,66 206,66 206,150 174,150 174,66 146,66" fill="none" stroke="url(#tm7g)" stroke-width="2"/></g>
+  <g stroke="url(#tm7g)" stroke-width="2" opacity="0.45"><line x1="146" y1="46" x2="161" y2="34"/><line x1="234" y1="46" x2="249" y2="34"/><line x1="234" y1="66" x2="249" y2="54"/><line x1="206" y1="150" x2="221" y2="138"/><line x1="174" y1="150" x2="189" y2="138"/></g>
+  <g clip-path="url(#tm7c)">
+    <path d="M150,108 L168,108 L176,108 L181,98 L186,124 L190,60 L194,138 L199,96 L204,108 L212,108 L230,108"
+          fill="none" stroke="url(#tm7g)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="190" cy="60" r="2.6" fill="#fafafa"/>
+  </g>
+  <polygon points="146,46 234,46 234,66 206,66 206,150 174,150 174,66 146,66" fill="none" stroke="url(#tm7g)" stroke-width="3"/>
+  <text x="190" y="200" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-weight="500" font-size="40" letter-spacing="14" fill="#fafafa">TIMBR</text>
+  <line x1="120" y1="216" x2="260" y2="216" stroke="url(#tm7g)" stroke-width="1.5"/>
+  <text x="190" y="234" text-anchor="middle" font-family="'Jost',sans-serif" font-weight="300" font-size="11" letter-spacing="9" fill="#b8b8c0">RECORDS</text>
+</svg></div><div class="card"><span class="no">08</span><svg class="logo" viewBox="0 0 380 260" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="tm8g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FF3D7F"/><stop offset=".55" stop-color="#FF5A2B"/><stop offset="1" stop-color="#FF8A1F"/></linearGradient>
+    <clipPath id="tm8c"><polygon points="146,46 234,46 234,66 206,66 206,150 174,150 174,66 146,66"/></clipPath>
+  </defs>
+  <g transform="translate(15,-12)" opacity="0.45"><polygon points="146,46 234,46 234,66 206,66 206,150 174,150 174,66 146,66" fill="none" stroke="url(#tm8g)" stroke-width="2"/></g>
+  <g stroke="url(#tm8g)" stroke-width="2" opacity="0.45"><line x1="146" y1="46" x2="161" y2="34"/><line x1="234" y1="46" x2="249" y2="34"/><line x1="234" y1="66" x2="249" y2="54"/><line x1="206" y1="150" x2="221" y2="138"/><line x1="174" y1="150" x2="189" y2="138"/></g>
+  <g clip-path="url(#tm8c)"><g stroke="url(#tm8g)" stroke-width="3.4" stroke-linecap="round"><line x1="154" y1="92" x2="154" y2="104"/><line x1="163" y1="84" x2="163" y2="112"/><line x1="172" y1="74" x2="172" y2="122"/><line x1="181" y1="62" x2="181" y2="134"/><line x1="190" y1="54" x2="190" y2="142"/><line x1="199" y1="62" x2="199" y2="134"/><line x1="208" y1="74" x2="208" y2="122"/><line x1="217" y1="84" x2="217" y2="112"/><line x1="226" y1="92" x2="226" y2="104"/></g><line x1="150" y1="98" x2="230" y2="98" stroke="url(#tm8g)" stroke-width="1" opacity="0.5"/></g>
+  <polygon points="146,46 234,46 234,66 206,66 206,150 174,150 174,66 146,66" fill="none" stroke="url(#tm8g)" stroke-width="3"/>
+  <text x="190" y="200" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-weight="500" font-size="40" letter-spacing="14" fill="#fafafa">TIMBR</text>
+  <line x1="120" y1="216" x2="260" y2="216" stroke="url(#tm8g)" stroke-width="1.5"/>
+  <text x="190" y="234" text-anchor="middle" font-family="'Jost',sans-serif" font-weight="300" font-size="11" letter-spacing="9" fill="#b8b8c0">RECORDS</text>
+</svg></div><div class="card"><span class="no">09</span><svg class="logo" viewBox="0 0 380 260" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="tm9g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FF3D7F"/><stop offset=".55" stop-color="#FF5A2B"/><stop offset="1" stop-color="#FF8A1F"/></linearGradient>
+    <clipPath id="tm9c"><polygon points="146,46 234,46 234,66 206,66 206,150 174,150 174,66 146,66"/></clipPath>
+  </defs>
+  <g transform="translate(15,-12)" opacity="0.45"><polygon points="146,46 234,46 234,66 206,66 206,150 174,150 174,66 146,66" fill="none" stroke="url(#tm9g)" stroke-width="2"/></g>
+  <g stroke="url(#tm9g)" stroke-width="2" opacity="0.45"><line x1="146" y1="46" x2="161" y2="34"/><line x1="234" y1="46" x2="249" y2="34"/><line x1="234" y1="66" x2="249" y2="54"/><line x1="206" y1="150" x2="221" y2="138"/><line x1="174" y1="150" x2="189" y2="138"/></g>
+  <g clip-path="url(#tm9c)"><g stroke="url(#tm9g)" stroke-width="4" stroke-linecap="round"><line x1="166" y1="74" x2="166" y2="100"/><line x1="178" y1="60" x2="178" y2="120"/><line x1="190" y1="52" x2="190" y2="146"/><line x1="202" y1="60" x2="202" y2="120"/><line x1="214" y1="74" x2="214" y2="100"/></g></g>
+  <polygon points="146,46 234,46 234,66 206,66 206,150 174,150 174,66 146,66" fill="none" stroke="url(#tm9g)" stroke-width="3"/>
+  <text x="190" y="200" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-weight="500" font-size="40" letter-spacing="14" fill="#fafafa">TIMBR</text>
+  <line x1="120" y1="216" x2="260" y2="216" stroke="url(#tm9g)" stroke-width="1.5"/>
+  <text x="190" y="234" text-anchor="middle" font-family="'Jost',sans-serif" font-weight="300" font-size="11" letter-spacing="9" fill="#b8b8c0">RECORDS</text>
+</svg></div><div class="card"><span class="no">10</span><svg class="logo" viewBox="0 0 380 260" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="tm10g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FF3D7F"/><stop offset=".55" stop-color="#FF5A2B"/><stop offset="1" stop-color="#FF8A1F"/></linearGradient>
+    <clipPath id="tm10c"><polygon points="146,46 234,46 234,66 206,66 206,150 174,150 174,66 146,66"/></clipPath>
+  </defs>
+  <g transform="translate(15,-12)" opacity="0.45"><polygon points="146,46 234,46 234,66 206,66 206,150 174,150 174,66 146,66" fill="none" stroke="url(#tm10g)" stroke-width="2"/></g>
+  <g stroke="url(#tm10g)" stroke-width="2" opacity="0.45"><line x1="146" y1="46" x2="161" y2="34"/><line x1="234" y1="46" x2="249" y2="34"/><line x1="234" y1="66" x2="249" y2="54"/><line x1="206" y1="150" x2="221" y2="138"/><line x1="174" y1="150" x2="189" y2="138"/></g>
+  <g clip-path="url(#tm10c)"><path d="M150,98 Q156,98 158,86 Q160,72 164,72 Q168,72 170,90 Q172,108 176,108 Q180,108 182,64 Q184,52 187,52 Q190,52 192,76 Q194,100 198,100 Q202,100 204,80 Q206,64 210,64 Q214,64 216,92 Q218,106 222,98 Q226,92 230,98 L230,148 L150,148 Z" fill="url(#tm10g)"/></g>
+  <polygon points="146,46 234,46 234,66 206,66 206,150 174,150 174,66 146,66" fill="none" stroke="url(#tm10g)" stroke-width="3"/>
+  <text x="190" y="200" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-weight="500" font-size="40" letter-spacing="14" fill="#fafafa">TIMBR</text>
+  <line x1="120" y1="216" x2="260" y2="216" stroke="url(#tm10g)" stroke-width="1.5"/>
+  <text x="190" y="234" text-anchor="middle" font-family="'Jost',sans-serif" font-weight="300" font-size="11" letter-spacing="9" fill="#b8b8c0">RECORDS</text>
+</svg></div><div class="card"><span class="no">11</span><svg class="logo" viewBox="0 0 380 260" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="tm11g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FF3D7F"/><stop offset=".55" stop-color="#FF5A2B"/><stop offset="1" stop-color="#FF8A1F"/></linearGradient>
+    <clipPath id="tm11c"><polygon points="146,46 234,46 234,66 206,66 206,150 174,150 174,66 146,66"/></clipPath>
+  </defs>
+  <g transform="translate(15,-12)" opacity="0.45"><polygon points="146,46 234,46 234,66 206,66 206,150 174,150 174,66 146,66" fill="none" stroke="url(#tm11g)" stroke-width="2"/></g>
+  <g stroke="url(#tm11g)" stroke-width="2" opacity="0.45"><line x1="146" y1="46" x2="161" y2="34"/><line x1="234" y1="46" x2="249" y2="34"/><line x1="234" y1="66" x2="249" y2="54"/><line x1="206" y1="150" x2="221" y2="138"/><line x1="174" y1="150" x2="189" y2="138"/></g>
+  <g clip-path="url(#tm11c)"><polyline points="150,57 162,57 168,42 176,72 183,30 190,90 197,40 204,68 212,57 232,57" fill="none" stroke="url(#tm11g)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><polyline points="174,108 178,108 182,98 187,120 190,90 193,124 197,96 201,116 205,108 206,108" fill="none" stroke="#FF6A00" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"/></g>
+  <polygon points="146,46 234,46 234,66 206,66 206,150 174,150 174,66 146,66" fill="none" stroke="url(#tm11g)" stroke-width="3"/>
+  <text x="190" y="200" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-weight="500" font-size="40" letter-spacing="14" fill="#fafafa">TIMBR</text>
+  <line x1="120" y1="216" x2="260" y2="216" stroke="url(#tm11g)" stroke-width="1.5"/>
+  <text x="190" y="234" text-anchor="middle" font-family="'Jost',sans-serif" font-weight="300" font-size="11" letter-spacing="9" fill="#b8b8c0">RECORDS</text>
+</svg></div><div class="card"><span class="no">12</span><svg class="logo" viewBox="0 0 380 260" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="tm12g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FF3D7F"/><stop offset=".55" stop-color="#FF5A2B"/><stop offset="1" stop-color="#FF8A1F"/></linearGradient>
+    <clipPath id="tm12c"><polygon points="146,46 234,46 234,66 206,66 206,150 174,150 174,66 146,66"/></clipPath>
+  </defs>
+  <g transform="translate(15,-12)" opacity="0.45"><polygon points="146,46 234,46 234,66 206,66 206,150 174,150 174,66 146,66" fill="none" stroke="url(#tm12g)" stroke-width="2"/></g>
+  <g stroke="url(#tm12g)" stroke-width="2" opacity="0.45"><line x1="146" y1="46" x2="161" y2="34"/><line x1="234" y1="46" x2="249" y2="34"/><line x1="234" y1="66" x2="249" y2="54"/><line x1="206" y1="150" x2="221" y2="138"/><line x1="174" y1="150" x2="189" y2="138"/></g>
+  <g clip-path="url(#tm12c)"><g stroke="url(#tm12g)" stroke-width="2.6" stroke-linecap="round"><line x1="190" y1="84" x2="190" y2="58"/><line x1="190" y1="84" x2="208" y2="62"/><line x1="190" y1="84" x2="222" y2="70"/><line x1="190" y1="84" x2="230" y2="84"/><line x1="190" y1="84" x2="222" y2="98"/><line x1="190" y1="84" x2="208" y2="106"/><line x1="190" y1="84" x2="172" y2="62"/><line x1="190" y1="84" x2="158" y2="70"/><line x1="190" y1="84" x2="150" y2="84"/><line x1="190" y1="84" x2="158" y2="98"/><line x1="190" y1="84" x2="172" y2="106"/><line x1="190" y1="84" x2="190" y2="150"/></g><circle cx="190" cy="84" r="6" fill="#fafafa"/><circle cx="190" cy="84" r="2.4" fill="#FF6A00"/></g>
+  <polygon points="146,46 234,46 234,66 206,66 206,150 174,150 174,66 146,66" fill="none" stroke="url(#tm12g)" stroke-width="3"/>
+  <text x="190" y="200" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-weight="500" font-size="40" letter-spacing="14" fill="#fafafa">TIMBR</text>
+  <line x1="120" y1="216" x2="260" y2="216" stroke="url(#tm12g)" stroke-width="1.5"/>
+  <text x="190" y="234" text-anchor="middle" font-family="'Jost',sans-serif" font-weight="300" font-size="11" letter-spacing="9" fill="#b8b8c0">RECORDS</text>
+</svg></div><div class="card"><span class="no">13</span><svg class="logo" viewBox="0 0 380 260" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="tm13g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FF3D7F"/><stop offset=".55" stop-color="#FF5A2B"/><stop offset="1" stop-color="#FF8A1F"/></linearGradient>
+    <clipPath id="tm13c"><polygon points="146,46 234,46 234,66 206,66 206,150 174,150 174,66 146,66"/></clipPath>
+  </defs>
+  <g transform="translate(15,-12)" opacity="0.45"><polygon points="146,46 234,46 234,66 206,66 206,150 174,150 174,66 146,66" fill="none" stroke="url(#tm13g)" stroke-width="2"/></g>
+  <g stroke="url(#tm13g)" stroke-width="2" opacity="0.45"><line x1="146" y1="46" x2="161" y2="34"/><line x1="234" y1="46" x2="249" y2="34"/><line x1="234" y1="66" x2="249" y2="54"/><line x1="206" y1="150" x2="221" y2="138"/><line x1="174" y1="150" x2="189" y2="138"/></g>
+  <g clip-path="url(#tm13c)">
+    <line x1="150" y1="120" x2="232" y2="120" stroke="url(#tm13g)" stroke-width="1.5" opacity="0.4"/>
+    <path d="M150,120 Q161,72 172,120 Q181,90 190,120 Q199,84 208,120 Q217,98 226,120 Q230,108 234,120" fill="none" stroke="url(#tm13g)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="161" cy="74" r="4.5" fill="#fafafa"/>
+    <circle cx="190" cy="92" r="4" fill="#FF6A00"/>
+    <circle cx="217" cy="100" r="3.5" fill="url(#tm13g)"/>
+    <circle cx="150" cy="120" r="2.5" fill="url(#tm13g)" opacity="0.7"/>
+    <circle cx="172" cy="120" r="2.5" fill="url(#tm13g)" opacity="0.7"/>
+    <circle cx="208" cy="120" r="2.5" fill="url(#tm13g)" opacity="0.7"/>
+  </g>
+  <polygon points="146,46 234,46 234,66 206,66 206,150 174,150 174,66 146,66" fill="none" stroke="url(#tm13g)" stroke-width="3"/>
+  <text x="190" y="200" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-weight="500" font-size="40" letter-spacing="14" fill="#fafafa">TIMBR</text>
+  <line x1="120" y1="216" x2="260" y2="216" stroke="url(#tm13g)" stroke-width="1.5"/>
+  <text x="190" y="234" text-anchor="middle" font-family="'Jost',sans-serif" font-weight="300" font-size="11" letter-spacing="9" fill="#b8b8c0">RECORDS</text>
+</svg></div><div class="card"><span class="no">14</span><svg class="logo" viewBox="0 0 380 260" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="tm14g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FF3D7F"/><stop offset=".55" stop-color="#FF5A2B"/><stop offset="1" stop-color="#FF8A1F"/></linearGradient>
+    <clipPath id="tm14c"><polygon points="146,46 234,46 234,66 206,66 206,150 174,150 174,66 146,66"/></clipPath>
+  </defs>
+  <g transform="translate(15,-12)" opacity="0.45"><polygon points="146,46 234,46 234,66 206,66 206,150 174,150 174,66 146,66" fill="none" stroke="url(#tm14g)" stroke-width="2"/></g>
+  <g stroke="url(#tm14g)" stroke-width="2" opacity="0.45"><line x1="146" y1="46" x2="161" y2="34"/><line x1="234" y1="46" x2="249" y2="34"/><line x1="234" y1="66" x2="249" y2="54"/><line x1="206" y1="150" x2="221" y2="138"/><line x1="174" y1="150" x2="189" y2="138"/></g>
+  <g clip-path="url(#tm14c)"><polygon points="180,90 180,128 210,109" fill="url(#tm14g)" stroke="url(#tm14g)" stroke-width="3" stroke-linejoin="round"/></g>
+  <polygon points="146,46 234,46 234,66 206,66 206,150 174,150 174,66 146,66" fill="none" stroke="url(#tm14g)" stroke-width="3"/>
+  <text x="190" y="200" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-weight="500" font-size="40" letter-spacing="14" fill="#fafafa">TIMBR</text>
+  <line x1="120" y1="216" x2="260" y2="216" stroke="url(#tm14g)" stroke-width="1.5"/>
+  <text x="190" y="234" text-anchor="middle" font-family="'Jost',sans-serif" font-weight="300" font-size="11" letter-spacing="9" fill="#b8b8c0">RECORDS</text>
+</svg></div><div class="card"><span class="no">15</span><svg class="logo" viewBox="0 0 380 260" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="tm15g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FF3D7F"/><stop offset=".55" stop-color="#FF5A2B"/><stop offset="1" stop-color="#FF8A1F"/></linearGradient>
+    <clipPath id="tm15c"><polygon points="146,46 234,46 234,66 206,66 206,150 174,150 174,66 146,66"/></clipPath>
+  </defs>
+  <g transform="translate(15,-12)" opacity="0.45"><polygon points="146,46 234,46 234,66 206,66 206,150 174,150 174,66 146,66" fill="none" stroke="url(#tm15g)" stroke-width="2"/></g>
+  <g stroke="url(#tm15g)" stroke-width="2" opacity="0.45"><line x1="146" y1="46" x2="161" y2="34"/><line x1="234" y1="46" x2="249" y2="34"/><line x1="234" y1="66" x2="249" y2="54"/><line x1="206" y1="150" x2="221" y2="138"/><line x1="174" y1="150" x2="189" y2="138"/></g>
+  <g clip-path="url(#tm15c)"><g fill="none" stroke="url(#tm15g)" stroke-width="2.4"><circle cx="190" cy="56" r="14"/><circle cx="190" cy="56" r="27" opacity="0.85"/><circle cx="190" cy="56" r="41" opacity="0.65"/><circle cx="190" cy="56" r="56" opacity="0.45"/><circle cx="190" cy="56" r="72" opacity="0.28"/></g><circle cx="190" cy="56" r="5" fill="#fafafa"/></g>
+  <polygon points="146,46 234,46 234,66 206,66 206,150 174,150 174,66 146,66" fill="none" stroke="url(#tm15g)" stroke-width="3"/>
+  <text x="190" y="200" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-weight="500" font-size="40" letter-spacing="14" fill="#fafafa">TIMBR</text>
+  <line x1="120" y1="216" x2="260" y2="216" stroke="url(#tm15g)" stroke-width="1.5"/>
+  <text x="190" y="234" text-anchor="middle" font-family="'Jost',sans-serif" font-weight="300" font-size="11" letter-spacing="9" fill="#b8b8c0">RECORDS</text>
+</svg></div><div class="card"><span class="no">16</span><svg class="logo" viewBox="0 0 380 260" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="tm16g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FF3D7F"/><stop offset=".55" stop-color="#FF5A2B"/><stop offset="1" stop-color="#FF8A1F"/></linearGradient>
+    <clipPath id="tm16c"><polygon points="146,46 234,46 234,66 206,66 206,150 174,150 174,66 146,66"/></clipPath>
+  </defs>
+  <g transform="translate(15,-12)" opacity="0.45"><polygon points="146,46 234,46 234,66 206,66 206,150 174,150 174,66 146,66" fill="none" stroke="url(#tm16g)" stroke-width="2"/></g>
+  <g stroke="url(#tm16g)" stroke-width="2" opacity="0.45"><line x1="146" y1="46" x2="161" y2="34"/><line x1="234" y1="46" x2="249" y2="34"/><line x1="234" y1="66" x2="249" y2="54"/><line x1="206" y1="150" x2="221" y2="138"/><line x1="174" y1="150" x2="189" y2="138"/></g>
+  <g clip-path="url(#tm16c)"><g fill="url(#tm16g)">
+    <rect x="151" y="52" width="6" height="14" rx="3"/>
+    <rect x="161" y="52" width="6" height="24" rx="3"/>
+    <rect x="171" y="52" width="6" height="36" rx="3"/>
+    <rect x="181" y="52" width="6" height="50" rx="3"/>
+    <rect x="191" y="52" width="6" height="66" rx="3"/>
+    <rect x="201" y="52" width="6" height="84" rx="3"/>
+    <rect x="211" y="52" width="6" height="98" rx="3"/>
+    <rect x="221" y="52" width="6" height="112" rx="3"/>
+  </g></g>
+  <polygon points="146,46 234,46 234,66 206,66 206,150 174,150 174,66 146,66" fill="none" stroke="url(#tm16g)" stroke-width="3"/>
+  <text x="190" y="200" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-weight="500" font-size="40" letter-spacing="14" fill="#fafafa">TIMBR</text>
+  <line x1="120" y1="216" x2="260" y2="216" stroke="url(#tm16g)" stroke-width="1.5"/>
+  <text x="190" y="234" text-anchor="middle" font-family="'Jost',sans-serif" font-weight="300" font-size="11" letter-spacing="9" fill="#b8b8c0">RECORDS</text>
+</svg></div><div class="card"><span class="no">17</span><svg class="logo" viewBox="0 0 380 260" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="tm17g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FF3D7F"/><stop offset=".55" stop-color="#FF5A2B"/><stop offset="1" stop-color="#FF8A1F"/></linearGradient>
+    <clipPath id="tm17c"><polygon points="146,46 234,46 234,66 206,66 206,150 174,150 174,66 146,66"/></clipPath>
+  </defs>
+  <g transform="translate(15,-12)" opacity="0.45"><polygon points="146,46 234,46 234,66 206,66 206,150 174,150 174,66 146,66" fill="none" stroke="url(#tm17g)" stroke-width="2"/></g>
+  <g stroke="url(#tm17g)" stroke-width="2" opacity="0.45"><line x1="146" y1="46" x2="161" y2="34"/><line x1="234" y1="46" x2="249" y2="34"/><line x1="234" y1="66" x2="249" y2="54"/><line x1="206" y1="150" x2="221" y2="138"/><line x1="174" y1="150" x2="189" y2="138"/></g>
+  <g clip-path="url(#tm17c)">
+    <g fill="none" stroke="url(#tm17g)" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M150,57 Q153,46 156,57 T162,57 T168,57 T174,57 T180,57 T186,57 T192,57 T198,57 T204,57 T210,57 T216,57 T222,57 T228,57 T234,57" stroke-width="1.6" opacity="0.85"/>
+      <path d="M150,108 Q153,72 156,108 T162,108 T168,108 T174,108 T180,108 T186,108 T192,108 T198,108 T204,108 T210,108 T216,108 T222,108 T228,108 T234,108" stroke-width="2.6"/>
+      <path d="M174,140 Q177,93 180,140 T186,140 T192,140 T198,140 T204,140 T210,140 T216,140" stroke-width="2.6"/>
+    </g>
+  </g>
+  <polygon points="146,46 234,46 234,66 206,66 206,150 174,150 174,66 146,66" fill="none" stroke="url(#tm17g)" stroke-width="3"/>
+  <text x="190" y="200" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-weight="500" font-size="40" letter-spacing="14" fill="#fafafa">TIMBR</text>
+  <line x1="120" y1="216" x2="260" y2="216" stroke="url(#tm17g)" stroke-width="1.5"/>
+  <text x="190" y="234" text-anchor="middle" font-family="'Jost',sans-serif" font-weight="300" font-size="11" letter-spacing="9" fill="#b8b8c0">RECORDS</text>
+</svg></div><div class="card"><span class="no">18</span><svg class="logo" viewBox="0 0 380 260" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="tm18g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FF3D7F"/><stop offset=".55" stop-color="#FF5A2B"/><stop offset="1" stop-color="#FF8A1F"/></linearGradient>
+    <clipPath id="tm18c"><polygon points="146,46 234,46 234,66 206,66 206,150 174,150 174,66 146,66"/></clipPath>
+  </defs>
+  <g transform="translate(15,-12)" opacity="0.45"><polygon points="146,46 234,46 234,66 206,66 206,150 174,150 174,66 146,66" fill="none" stroke="url(#tm18g)" stroke-width="2"/></g>
+  <g stroke="url(#tm18g)" stroke-width="2" opacity="0.45"><line x1="146" y1="46" x2="161" y2="34"/><line x1="234" y1="46" x2="249" y2="34"/><line x1="234" y1="66" x2="249" y2="54"/><line x1="206" y1="150" x2="221" y2="138"/><line x1="174" y1="150" x2="189" y2="138"/></g>
+  <g clip-path="url(#tm18c)">
+    <g stroke="url(#tm18g)" stroke-width="2.4" stroke-linecap="round">
+      <line x1="150" y1="54" x2="232" y2="54"/>
+      <line x1="150" y1="62" x2="232" y2="62"/>
+    </g>
+    <g stroke="#fafafa" stroke-width="1.6" stroke-linecap="round" opacity="0.85">
+      <line x1="150" y1="74" x2="232" y2="74"/>
+      <line x1="150" y1="82" x2="232" y2="82"/>
+      <line x1="150" y1="90" x2="232" y2="90"/>
+      <line x1="150" y1="98" x2="232" y2="98"/>
+      <line x1="150" y1="106" x2="232" y2="106"/>
+      <line x1="150" y1="114" x2="232" y2="114"/>
+      <line x1="150" y1="122" x2="232" y2="122"/>
+      <line x1="150" y1="130" x2="232" y2="130"/>
+    </g>
+    <g stroke="url(#tm18g)" stroke-width="2.4" stroke-linecap="round">
+      <line x1="150" y1="140" x2="232" y2="140"/>
+      <line x1="150" y1="148" x2="232" y2="148"/>
+    </g>
+    <g fill="#FF6A00">
+      <circle cx="184" cy="102" r="4.5"/>
+      <circle cx="196" cy="102" r="4.5"/>
+    </g>
+  </g>
+  <polygon points="146,46 234,46 234,66 206,66 206,150 174,150 174,66 146,66" fill="none" stroke="url(#tm18g)" stroke-width="3"/>
+  <text x="190" y="200" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-weight="500" font-size="40" letter-spacing="14" fill="#fafafa">TIMBR</text>
+  <line x1="120" y1="216" x2="260" y2="216" stroke="url(#tm18g)" stroke-width="1.5"/>
+  <text x="190" y="234" text-anchor="middle" font-family="'Jost',sans-serif" font-weight="300" font-size="11" letter-spacing="9" fill="#b8b8c0">RECORDS</text>
+</svg></div><div class="card"><span class="no">19</span><svg class="logo" viewBox="0 0 380 260" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="tm19g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FF3D7F"/><stop offset=".55" stop-color="#FF5A2B"/><stop offset="1" stop-color="#FF8A1F"/></linearGradient>
+    <clipPath id="tm19c"><polygon points="146,46 234,46 234,66 206,66 206,150 174,150 174,66 146,66"/></clipPath>
+  </defs>
+  <g transform="translate(15,-12)" opacity="0.45"><polygon points="146,46 234,46 234,66 206,66 206,150 174,150 174,66 146,66" fill="none" stroke="url(#tm19g)" stroke-width="2"/></g>
+  <g stroke="url(#tm19g)" stroke-width="2" opacity="0.45"><line x1="146" y1="46" x2="161" y2="34"/><line x1="234" y1="46" x2="249" y2="34"/><line x1="234" y1="66" x2="249" y2="54"/><line x1="206" y1="150" x2="221" y2="138"/><line x1="174" y1="150" x2="189" y2="138"/></g>
+  <g clip-path="url(#tm19c)">
+    <g stroke="url(#tm19g)" stroke-width="3" stroke-linecap="round">
+      <line x1="156" y1="68" x2="156" y2="64"/>
+      <line x1="164" y1="68" x2="164" y2="62"/>
+      <line x1="172" y1="68" x2="172" y2="58"/>
+      <line x1="180" y1="120" x2="180" y2="78"/>
+      <line x1="188" y1="120" x2="188" y2="70"/>
+      <line x1="196" y1="120" x2="196" y2="78"/>
+      <line x1="204" y1="68" x2="204" y2="58"/>
+      <line x1="212" y1="68" x2="212" y2="62"/>
+      <line x1="220" y1="68" x2="220" y2="64"/>
+    </g>
+    <g stroke="url(#tm19g)" stroke-width="3" stroke-linecap="round" opacity="0.85">
+      <line x1="180" y1="120" x2="180" y2="100"/>
+      <line x1="188" y1="148" x2="188" y2="100"/>
+      <line x1="196" y1="120" x2="196" y2="100"/>
+    </g>
+    <circle cx="188" cy="89" r="2.4" fill="#FF6A00"/>
+  </g>
+  <polygon points="146,46 234,46 234,66 206,66 206,150 174,150 174,66 146,66" fill="none" stroke="url(#tm19g)" stroke-width="3"/>
+  <text x="190" y="200" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-weight="500" font-size="40" letter-spacing="14" fill="#fafafa">TIMBR</text>
+  <line x1="120" y1="216" x2="260" y2="216" stroke="url(#tm19g)" stroke-width="1.5"/>
+  <text x="190" y="234" text-anchor="middle" font-family="'Jost',sans-serif" font-weight="300" font-size="11" letter-spacing="9" fill="#b8b8c0">RECORDS</text>
+</svg></div><div class="card"><span class="no">20</span><svg class="logo" viewBox="0 0 380 260" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="tm20g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FF3D7F"/><stop offset=".55" stop-color="#FF5A2B"/><stop offset="1" stop-color="#FF8A1F"/></linearGradient>
+    <clipPath id="tm20c"><polygon points="146,46 234,46 234,66 206,66 206,150 174,150 174,66 146,66"/></clipPath>
+  </defs>
+  <g transform="translate(15,-12)" opacity="0.45"><polygon points="146,46 234,46 234,66 206,66 206,150 174,150 174,66 146,66" fill="none" stroke="url(#tm20g)" stroke-width="2"/></g>
+  <g stroke="url(#tm20g)" stroke-width="2" opacity="0.45"><line x1="146" y1="46" x2="161" y2="34"/><line x1="234" y1="46" x2="249" y2="34"/><line x1="234" y1="66" x2="249" y2="54"/><line x1="206" y1="150" x2="221" y2="138"/><line x1="174" y1="150" x2="189" y2="138"/></g>
+  <g clip-path="url(#tm20c)">
+    <g fill="#FF6A00">
+      <circle cx="156" cy="54" r="2.4"/>
+      <circle cx="168" cy="51" r="2.4"/>
+      <circle cx="190" cy="49" r="2.4"/>
+      <circle cx="212" cy="51" r="2.4"/>
+      <circle cx="224" cy="54" r="2.4"/>
+    </g>
+    <g fill="url(#tm20g)">
+      <rect x="178" y="92" width="6" height="48" rx="3"/>
+      <rect x="187" y="80" width="6" height="60" rx="3"/>
+      <rect x="196" y="100" width="6" height="40" rx="3"/>
+    </g>
+  </g>
+  <polygon points="146,46 234,46 234,66 206,66 206,150 174,150 174,66 146,66" fill="none" stroke="url(#tm20g)" stroke-width="3"/>
+  <text x="190" y="200" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-weight="500" font-size="40" letter-spacing="14" fill="#fafafa">TIMBR</text>
+  <line x1="120" y1="216" x2="260" y2="216" stroke="url(#tm20g)" stroke-width="1.5"/>
+  <text x="190" y="234" text-anchor="middle" font-family="'Jost',sans-serif" font-weight="300" font-size="11" letter-spacing="9" fill="#b8b8c0">RECORDS</text>
+</svg></div><div class="card"><span class="no">21</span><svg class="logo" viewBox="0 0 380 260" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="tm21g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FF3D7F"/><stop offset=".55" stop-color="#FF5A2B"/><stop offset="1" stop-color="#FF8A1F"/></linearGradient>
+    <clipPath id="tm21c"><polygon points="146,46 234,46 234,66 206,66 206,150 174,150 174,66 146,66"/></clipPath>
+  </defs>
+  <g transform="translate(15,-12)" opacity="0.45"><polygon points="146,46 234,46 234,66 206,66 206,150 174,150 174,66 146,66" fill="none" stroke="url(#tm21g)" stroke-width="2"/></g>
+  <g stroke="url(#tm21g)" stroke-width="2" opacity="0.45"><line x1="146" y1="46" x2="161" y2="34"/><line x1="234" y1="46" x2="249" y2="34"/><line x1="234" y1="66" x2="249" y2="54"/><line x1="206" y1="150" x2="221" y2="138"/><line x1="174" y1="150" x2="189" y2="138"/></g>
+  <g clip-path="url(#tm21c)"><path d="M150 100 L168 100 L176 100 L182 100 L186 70 L190 130 L194 88 L198 112 L202 100 L210 100 L222 100" fill="none" stroke="url(#tm21g)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="222" cy="100" r="5" fill="#FF6A00"/></g>
+  <polygon points="146,46 234,46 234,66 206,66 206,150 174,150 174,66 146,66" fill="none" stroke="url(#tm21g)" stroke-width="3"/>
+  <text x="190" y="200" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-weight="500" font-size="40" letter-spacing="14" fill="#fafafa">TIMBR</text>
+  <line x1="120" y1="216" x2="260" y2="216" stroke="url(#tm21g)" stroke-width="1.5"/>
+  <text x="190" y="234" text-anchor="middle" font-family="'Jost',sans-serif" font-weight="300" font-size="11" letter-spacing="9" fill="#b8b8c0">RECORDS</text>
+</svg></div><div class="card"><span class="no">22</span><svg class="logo" viewBox="0 0 380 260" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="tm22g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FF3D7F"/><stop offset=".55" stop-color="#FF5A2B"/><stop offset="1" stop-color="#FF8A1F"/></linearGradient>
+    <clipPath id="tm22c"><polygon points="146,46 234,46 234,66 206,66 206,150 174,150 174,66 146,66"/></clipPath>
+  </defs>
+  <g transform="translate(15,-12)" opacity="0.45"><polygon points="146,46 234,46 234,66 206,66 206,150 174,150 174,66 146,66" fill="none" stroke="url(#tm22g)" stroke-width="2"/></g>
+  <g stroke="url(#tm22g)" stroke-width="2" opacity="0.45"><line x1="146" y1="46" x2="161" y2="34"/><line x1="234" y1="46" x2="249" y2="34"/><line x1="234" y1="66" x2="249" y2="54"/><line x1="206" y1="150" x2="221" y2="138"/><line x1="174" y1="150" x2="189" y2="138"/></g>
+  <g clip-path="url(#tm22c)">
+    <g fill="url(#tm22g)">
+      <circle cx="154" cy="52" r="1.6" opacity="0.85"/><circle cx="166" cy="52" r="1.6" opacity="0.85"/><circle cx="178" cy="52" r="1.6" opacity="0.85"/><circle cx="190" cy="52" r="2.2" opacity="1"/><circle cx="202" cy="52" r="1.6" opacity="0.85"/><circle cx="214" cy="52" r="1.6" opacity="0.85"/><circle cx="226" cy="52" r="1.6" opacity="0.85"/>
+      <circle cx="154" cy="62" r="1.4" opacity="0.7"/><circle cx="166" cy="62" r="1.8" opacity="0.9"/><circle cx="178" cy="62" r="2" opacity="1"/><circle cx="190" cy="62" r="2.6" opacity="1"/><circle cx="202" cy="62" r="2" opacity="1"/><circle cx="214" cy="62" r="1.8" opacity="0.9"/><circle cx="226" cy="62" r="1.4" opacity="0.7"/>
+      <circle cx="178" cy="72" r="2.4" opacity="1"/><circle cx="190" cy="72" r="3" opacity="1"/><circle cx="202" cy="72" r="2.4" opacity="1"/>
+      <circle cx="178" cy="82" r="2" opacity="0.95"/><circle cx="190" cy="82" r="2.8" opacity="1"/><circle cx="202" cy="82" r="2" opacity="0.95"/>
+      <circle cx="178" cy="92" r="1.8" opacity="0.85"/><circle cx="190" cy="92" r="2.6" opacity="1"/><circle cx="202" cy="92" r="1.8" opacity="0.85"/>
+      <circle cx="178" cy="102" r="2.2" opacity="0.95"/><circle cx="190" cy="102" r="2.8" opacity="1"/><circle cx="202" cy="102" r="2.2" opacity="0.95"/>
+      <circle cx="178" cy="112" r="1.7" opacity="0.8"/><circle cx="190" cy="112" r="2.4" opacity="1"/><circle cx="202" cy="112" r="1.7" opacity="0.8"/>
+      <circle cx="178" cy="122" r="1.9" opacity="0.85"/><circle cx="190" cy="122" r="2.6" opacity="1"/><circle cx="202" cy="122" r="1.9" opacity="0.85"/>
+      <circle cx="178" cy="132" r="1.5" opacity="0.7"/><circle cx="190" cy="132" r="2.2" opacity="0.95"/><circle cx="202" cy="132" r="1.5" opacity="0.7"/>
+      <circle cx="178" cy="142" r="1.3" opacity="0.55"/><circle cx="190" cy="142" r="1.9" opacity="0.85"/><circle cx="202" cy="142" r="1.3" opacity="0.55"/>
+    </g>
+  </g>
+  <polygon points="146,46 234,46 234,66 206,66 206,150 174,150 174,66 146,66" fill="none" stroke="url(#tm22g)" stroke-width="3"/>
+  <text x="190" y="200" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-weight="500" font-size="40" letter-spacing="14" fill="#fafafa">TIMBR</text>
+  <line x1="120" y1="216" x2="260" y2="216" stroke="url(#tm22g)" stroke-width="1.5"/>
+  <text x="190" y="234" text-anchor="middle" font-family="'Jost',sans-serif" font-weight="300" font-size="11" letter-spacing="9" fill="#b8b8c0">RECORDS</text>
+</svg></div><div class="card"><span class="no">23</span><svg class="logo" viewBox="0 0 380 260" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="tm23g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FF3D7F"/><stop offset=".55" stop-color="#FF5A2B"/><stop offset="1" stop-color="#FF8A1F"/></linearGradient>
+    <clipPath id="tm23c"><polygon points="146,46 234,46 234,66 206,66 206,150 174,150 174,66 146,66"/></clipPath>
+  </defs>
+  <g transform="translate(15,-12)" opacity="0.45"><polygon points="146,46 234,46 234,66 206,66 206,150 174,150 174,66 146,66" fill="none" stroke="url(#tm23g)" stroke-width="2"/></g>
+  <g stroke="url(#tm23g)" stroke-width="2" opacity="0.45"><line x1="146" y1="46" x2="161" y2="34"/><line x1="234" y1="46" x2="249" y2="34"/><line x1="234" y1="66" x2="249" y2="54"/><line x1="206" y1="150" x2="221" y2="138"/><line x1="174" y1="150" x2="189" y2="138"/></g>
+  <g clip-path="url(#tm23c)">
+    <g stroke="url(#tm23g)" stroke-width="3" stroke-linecap="round">
+      <line x1="156" y1="56" x2="178" y2="56"/>
+      <line x1="184" y1="56" x2="224" y2="56"/>
+      <line x1="150" y1="74" x2="172" y2="74"/>
+      <line x1="178" y1="74" x2="206" y2="74"/>
+      <line x1="172" y1="92" x2="194" y2="92"/>
+      <line x1="200" y1="92" x2="232" y2="92"/>
+      <line x1="176" y1="110" x2="200" y2="110"/>
+      <line x1="178" y1="128" x2="196" y2="128"/>
+      <line x1="180" y1="144" x2="200" y2="144"/>
+    </g>
+    <g stroke="#fafafa" stroke-width="2" stroke-linecap="round" opacity="0.85">
+      <line x1="182" y1="56" x2="200" y2="56"/>
+      <line x1="158" y1="74" x2="176" y2="74"/>
+      <line x1="184" y1="92" x2="198" y2="92"/>
+      <line x1="180" y1="110" x2="196" y2="110"/>
+      <line x1="182" y1="128" x2="194" y2="128"/>
+    </g>
+    <g fill="#FF6A00">
+      <rect x="178" y="53" width="3" height="6"/>
+      <rect x="190" y="89" width="3" height="6"/>
+      <rect x="198" y="125" width="3" height="6"/>
+    </g>
+  </g>
+  <polygon points="146,46 234,46 234,66 206,66 206,150 174,150 174,66 146,66" fill="none" stroke="url(#tm23g)" stroke-width="3"/>
+  <text x="190" y="200" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-weight="500" font-size="40" letter-spacing="14" fill="#fafafa">TIMBR</text>
+  <line x1="120" y1="216" x2="260" y2="216" stroke="url(#tm23g)" stroke-width="1.5"/>
+  <text x="190" y="234" text-anchor="middle" font-family="'Jost',sans-serif" font-weight="300" font-size="11" letter-spacing="9" fill="#b8b8c0">RECORDS</text>
+</svg></div><div class="card"><span class="no">24</span><svg class="logo" viewBox="0 0 380 260" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="tm24g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FF3D7F"/><stop offset=".55" stop-color="#FF5A2B"/><stop offset="1" stop-color="#FF8A1F"/></linearGradient>
+    <clipPath id="tm24c"><polygon points="146,46 234,46 234,66 206,66 206,150 174,150 174,66 146,66"/></clipPath>
+  </defs>
+  <g transform="translate(15,-12)" opacity="0.45"><polygon points="146,46 234,46 234,66 206,66 206,150 174,150 174,66 146,66" fill="none" stroke="url(#tm24g)" stroke-width="2"/></g>
+  <g stroke="url(#tm24g)" stroke-width="2" opacity="0.45"><line x1="146" y1="46" x2="161" y2="34"/><line x1="234" y1="46" x2="249" y2="34"/><line x1="234" y1="66" x2="249" y2="54"/><line x1="206" y1="150" x2="221" y2="138"/><line x1="174" y1="150" x2="189" y2="138"/></g>
+  <g clip-path="url(#tm24c)">
+    <g fill="none" stroke="url(#tm24g)" stroke-width="1.6">
+      <circle cx="190" cy="100" r="6"/>
+      <circle cx="190" cy="100" r="14"/>
+      <circle cx="190" cy="100" r="22"/>
+      <circle cx="190" cy="100" r="30"/>
+      <circle cx="190" cy="100" r="38"/>
+      <circle cx="190" cy="100" r="46"/>
+      <circle cx="190" cy="100" r="54"/>
+    </g>
+    <circle cx="190" cy="100" r="2.6" fill="#fafafa"/>
+    <circle cx="190" cy="100" r="6" fill="none" stroke="#FF6A00" stroke-width="2.2"/>
+  </g>
+  <polygon points="146,46 234,46 234,66 206,66 206,150 174,150 174,66 146,66" fill="none" stroke="url(#tm24g)" stroke-width="3"/>
+  <text x="190" y="200" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-weight="500" font-size="40" letter-spacing="14" fill="#fafafa">TIMBR</text>
+  <line x1="120" y1="216" x2="260" y2="216" stroke="url(#tm24g)" stroke-width="1.5"/>
+  <text x="190" y="234" text-anchor="middle" font-family="'Jost',sans-serif" font-weight="300" font-size="11" letter-spacing="9" fill="#b8b8c0">RECORDS</text>
+</svg></div><div class="card"><span class="no">25</span><svg class="logo" viewBox="0 0 380 260" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="tm25g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FF3D7F"/><stop offset=".55" stop-color="#FF5A2B"/><stop offset="1" stop-color="#FF8A1F"/></linearGradient>
+    <clipPath id="tm25c"><polygon points="146,46 234,46 234,66 206,66 206,150 174,150 174,66 146,66"/></clipPath>
+  </defs>
+  <g transform="translate(15,-12)" opacity="0.45"><polygon points="146,46 234,46 234,66 206,66 206,150 174,150 174,66 146,66" fill="none" stroke="url(#tm25g)" stroke-width="2"/></g>
+  <g stroke="url(#tm25g)" stroke-width="2" opacity="0.45"><line x1="146" y1="46" x2="161" y2="34"/><line x1="234" y1="46" x2="249" y2="34"/><line x1="234" y1="66" x2="249" y2="54"/><line x1="206" y1="150" x2="221" y2="138"/><line x1="174" y1="150" x2="189" y2="138"/></g>
+  <g clip-path="url(#tm25c)"><g stroke="url(#tm25g)" stroke-width="3" stroke-linecap="round">
+    <line x1="154" y1="57" x2="154" y2="55" opacity="0.30"/>
+    <line x1="162" y1="59" x2="162" y2="53" opacity="0.42"/>
+    <line x1="170" y1="56" x2="170" y2="56" opacity="0.52"/>
+    <line x1="178" y1="80" x2="178" y2="138" opacity="1"/>
+    <line x1="186" y1="68" x2="186" y2="150" opacity="1"/>
+    <line x1="194" y1="78" x2="194" y2="140" opacity="0.92"/>
+    <line x1="202" y1="88" x2="202" y2="130" opacity="0.80"/>
+    <line x1="210" y1="62" x2="210" y2="54" opacity="0.46"/>
+    <line x1="218" y1="60" x2="218" y2="56" opacity="0.34"/>
+    <line x1="226" y1="58" x2="226" y2="56" opacity="0.22"/>
+  </g></g>
+  <polygon points="146,46 234,46 234,66 206,66 206,150 174,150 174,66 146,66" fill="none" stroke="url(#tm25g)" stroke-width="3"/>
+  <text x="190" y="200" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-weight="500" font-size="40" letter-spacing="14" fill="#fafafa">TIMBR</text>
+  <line x1="120" y1="216" x2="260" y2="216" stroke="url(#tm25g)" stroke-width="1.5"/>
+  <text x="190" y="234" text-anchor="middle" font-family="'Jost',sans-serif" font-weight="300" font-size="11" letter-spacing="9" fill="#b8b8c0">RECORDS</text>
+</svg></div><div class="card"><span class="no">26</span><svg class="logo" viewBox="0 0 380 260" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="tm26g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FF3D7F"/><stop offset=".55" stop-color="#FF5A2B"/><stop offset="1" stop-color="#FF8A1F"/></linearGradient>
+    <clipPath id="tm26c"><polygon points="146,46 234,46 234,66 206,66 206,150 174,150 174,66 146,66"/></clipPath>
+  </defs>
+  <g transform="translate(15,-12)" opacity="0.45"><polygon points="146,46 234,46 234,66 206,66 206,150 174,150 174,66 146,66" fill="none" stroke="url(#tm26g)" stroke-width="2"/></g>
+  <g stroke="url(#tm26g)" stroke-width="2" opacity="0.45"><line x1="146" y1="46" x2="161" y2="34"/><line x1="234" y1="46" x2="249" y2="34"/><line x1="234" y1="66" x2="249" y2="54"/><line x1="206" y1="150" x2="221" y2="138"/><line x1="174" y1="150" x2="189" y2="138"/></g>
+  <g clip-path="url(#tm26c)">
+    <path d="M150,98 C168,60 192,138 210,98 C222,72 234,84 240,98" fill="none" stroke="url(#tm26g)" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="150" cy="98" r="3.2" fill="#fafafa"/>
+    <circle cx="240" cy="98" r="3.2" fill="#FF6A00"/>
+  </g>
+  <polygon points="146,46 234,46 234,66 206,66 206,150 174,150 174,66 146,66" fill="none" stroke="url(#tm26g)" stroke-width="3"/>
+  <text x="190" y="200" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-weight="500" font-size="40" letter-spacing="14" fill="#fafafa">TIMBR</text>
+  <line x1="120" y1="216" x2="260" y2="216" stroke="url(#tm26g)" stroke-width="1.5"/>
+  <text x="190" y="234" text-anchor="middle" font-family="'Jost',sans-serif" font-weight="300" font-size="11" letter-spacing="9" fill="#b8b8c0">RECORDS</text>
+</svg></div><div class="card"><span class="no">27</span><svg class="logo" viewBox="0 0 380 260" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="tm27g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FF3D7F"/><stop offset=".55" stop-color="#FF5A2B"/><stop offset="1" stop-color="#FF8A1F"/></linearGradient>
+    <clipPath id="tm27c"><polygon points="146,46 234,46 234,66 206,66 206,150 174,150 174,66 146,66"/></clipPath>
+  </defs>
+  <g transform="translate(15,-12)" opacity="0.45"><polygon points="146,46 234,46 234,66 206,66 206,150 174,150 174,66 146,66" fill="none" stroke="url(#tm27g)" stroke-width="2"/></g>
+  <g stroke="url(#tm27g)" stroke-width="2" opacity="0.45"><line x1="146" y1="46" x2="161" y2="34"/><line x1="234" y1="46" x2="249" y2="34"/><line x1="234" y1="66" x2="249" y2="54"/><line x1="206" y1="150" x2="221" y2="138"/><line x1="174" y1="150" x2="189" y2="138"/></g>
+  <g clip-path="url(#tm27c)"><path d="M146,98 C158,72 170,72 182,98 C194,124 206,124 218,98 C230,72 236,80 240,90 L240,116 C236,106 230,98 218,124 C206,150 194,150 182,124 C170,98 158,98 146,124 Z" fill="url(#tm27g)"/></g>
+  <polygon points="146,46 234,46 234,66 206,66 206,150 174,150 174,66 146,66" fill="none" stroke="url(#tm27g)" stroke-width="3"/>
+  <text x="190" y="200" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-weight="500" font-size="40" letter-spacing="14" fill="#fafafa">TIMBR</text>
+  <line x1="120" y1="216" x2="260" y2="216" stroke="url(#tm27g)" stroke-width="1.5"/>
+  <text x="190" y="234" text-anchor="middle" font-family="'Jost',sans-serif" font-weight="300" font-size="11" letter-spacing="9" fill="#b8b8c0">RECORDS</text>
+</svg></div><div class="card"><span class="no">28</span><svg class="logo" viewBox="0 0 380 260" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="tm28g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FF3D7F"/><stop offset=".55" stop-color="#FF5A2B"/><stop offset="1" stop-color="#FF8A1F"/></linearGradient>
+    <clipPath id="tm28c"><polygon points="146,46 234,46 234,66 206,66 206,150 174,150 174,66 146,66"/></clipPath>
+  </defs>
+  <g transform="translate(15,-12)" opacity="0.45"><polygon points="146,46 234,46 234,66 206,66 206,150 174,150 174,66 146,66" fill="none" stroke="url(#tm28g)" stroke-width="2"/></g>
+  <g stroke="url(#tm28g)" stroke-width="2" opacity="0.45"><line x1="146" y1="46" x2="161" y2="34"/><line x1="234" y1="46" x2="249" y2="34"/><line x1="234" y1="66" x2="249" y2="54"/><line x1="206" y1="150" x2="221" y2="138"/><line x1="174" y1="150" x2="189" y2="138"/></g>
+  <g clip-path="url(#tm28c)">
+    <g fill="none" stroke="url(#tm28g)" stroke-width="1.4" opacity="0.5">
+      <circle cx="190" cy="108" r="13"/>
+      <circle cx="190" cy="108" r="20"/>
+      <circle cx="190" cy="108" r="27"/>
+      <circle cx="190" cy="108" r="34"/>
+    </g>
+    <circle cx="190" cy="108" r="4.5" fill="url(#tm28g)"/>
+    <g stroke="#fafafa" stroke-width="3.2" stroke-linecap="round">
+      <line x1="225" y1="50" x2="194" y2="104"/>
+    </g>
+    <circle cx="225" cy="50" r="4.2" fill="#fafafa"/>
+    <g stroke="#FF6A00" stroke-width="3" stroke-linecap="round">
+      <line x1="194" y1="104" x2="190.5" y2="111"/>
+    </g>
+    <circle cx="190" cy="108" r="2" fill="#fafafa"/>
+  </g>
+  <polygon points="146,46 234,46 234,66 206,66 206,150 174,150 174,66 146,66" fill="none" stroke="url(#tm28g)" stroke-width="3"/>
+  <text x="190" y="200" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-weight="500" font-size="40" letter-spacing="14" fill="#fafafa">TIMBR</text>
+  <line x1="120" y1="216" x2="260" y2="216" stroke="url(#tm28g)" stroke-width="1.5"/>
+  <text x="190" y="234" text-anchor="middle" font-family="'Jost',sans-serif" font-weight="300" font-size="11" letter-spacing="9" fill="#b8b8c0">RECORDS</text>
+</svg></div><div class="card"><span class="no">29</span><svg class="logo" viewBox="0 0 380 260" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="tm29g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FF3D7F"/><stop offset=".55" stop-color="#FF5A2B"/><stop offset="1" stop-color="#FF8A1F"/></linearGradient>
+    <clipPath id="tm29c"><polygon points="146,46 234,46 234,66 206,66 206,150 174,150 174,66 146,66"/></clipPath>
+  </defs>
+  <g transform="translate(15,-12)" opacity="0.45"><polygon points="146,46 234,46 234,66 206,66 206,150 174,150 174,66 146,66" fill="none" stroke="url(#tm29g)" stroke-width="2"/></g>
+  <g stroke="url(#tm29g)" stroke-width="2" opacity="0.45"><line x1="146" y1="46" x2="161" y2="34"/><line x1="234" y1="46" x2="249" y2="34"/><line x1="234" y1="66" x2="249" y2="54"/><line x1="206" y1="150" x2="221" y2="138"/><line x1="174" y1="150" x2="189" y2="138"/></g>
+  <g clip-path="url(#tm29c)"><g stroke="url(#tm29g)" stroke-width="3.4" stroke-linecap="round"><line x1="154" y1="62" x2="154" y2="56"/><line x1="162" y1="62" x2="162" y2="52"/><line x1="170" y1="62" x2="170" y2="50"/><line x1="178" y1="142" x2="178" y2="92"/><line x1="186" y1="142" x2="186" y2="72"/><line x1="194" y1="142" x2="194" y2="84"/><line x1="202" y1="142" x2="202" y2="100"/><line x1="210" y1="62" x2="210" y2="50"/><line x1="218" y1="62" x2="218" y2="52"/><line x1="226" y1="62" x2="226" y2="56"/></g></g>
+  <polygon points="146,46 234,46 234,66 206,66 206,150 174,150 174,66 146,66" fill="none" stroke="url(#tm29g)" stroke-width="3"/>
+  <text x="190" y="200" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-weight="500" font-size="40" letter-spacing="14" fill="#fafafa">TIMBR</text>
+  <line x1="120" y1="216" x2="260" y2="216" stroke="url(#tm29g)" stroke-width="1.5"/>
+  <text x="190" y="234" text-anchor="middle" font-family="'Jost',sans-serif" font-weight="300" font-size="11" letter-spacing="9" fill="#b8b8c0">RECORDS</text>
+</svg></div><div class="card"><span class="no">30</span><svg class="logo" viewBox="0 0 380 260" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="tm30g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FF3D7F"/><stop offset=".55" stop-color="#FF5A2B"/><stop offset="1" stop-color="#FF8A1F"/></linearGradient>
+    <clipPath id="tm30c"><polygon points="146,46 234,46 234,66 206,66 206,150 174,150 174,66 146,66"/></clipPath>
+  </defs>
+  <g transform="translate(15,-12)" opacity="0.45"><polygon points="146,46 234,46 234,66 206,66 206,150 174,150 174,66 146,66" fill="none" stroke="url(#tm30g)" stroke-width="2"/></g>
+  <g stroke="url(#tm30g)" stroke-width="2" opacity="0.45"><line x1="146" y1="46" x2="161" y2="34"/><line x1="234" y1="46" x2="249" y2="34"/><line x1="234" y1="66" x2="249" y2="54"/><line x1="206" y1="150" x2="221" y2="138"/><line x1="174" y1="150" x2="189" y2="138"/></g>
+  <g clip-path="url(#tm30c)"><g fill="url(#tm30g)">
+    <rect x="150" y="52" width="2" height="10" rx="1"/>
+    <rect x="155" y="52" width="4" height="10" rx="1"/>
+    <rect x="162" y="52" width="1.5" height="10" rx="0.75"/>
+    <rect x="167" y="52" width="3" height="10" rx="1"/>
+    <rect x="173" y="52" width="2" height="10" rx="1"/>
+    <rect x="178" y="52" width="5" height="10" rx="1"/>
+    <rect x="186" y="52" width="1.5" height="10" rx="0.75"/>
+    <rect x="191" y="52" width="3" height="10" rx="1"/>
+    <rect x="197" y="52" width="2" height="10" rx="1"/>
+    <rect x="202" y="52" width="4" height="10" rx="1"/>
+    <rect x="209" y="52" width="1.5" height="10" rx="0.75"/>
+    <rect x="214" y="52" width="3" height="10" rx="1"/>
+    <rect x="220" y="52" width="2" height="10" rx="1"/>
+    <rect x="225" y="52" width="5" height="10" rx="1"/>
+    <rect x="176" y="70" width="2" height="74" rx="1"/>
+    <rect x="181" y="70" width="5" height="74" rx="2"/>
+    <rect x="189.5" y="70" width="1.5" height="74" rx="0.75"/>
+    <rect x="194" y="70" width="3.5" height="74" rx="1.5"/>
+    <rect x="200" y="70" width="2" height="74" rx="1"/>
+    <rect x="204" y="70" width="1.2" height="74" rx="0.6"/>
+  </g></g>
+  <polygon points="146,46 234,46 234,66 206,66 206,150 174,150 174,66 146,66" fill="none" stroke="url(#tm30g)" stroke-width="3"/>
+  <text x="190" y="200" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-weight="500" font-size="40" letter-spacing="14" fill="#fafafa">TIMBR</text>
+  <line x1="120" y1="216" x2="260" y2="216" stroke="url(#tm30g)" stroke-width="1.5"/>
+  <text x="190" y="234" text-anchor="middle" font-family="'Jost',sans-serif" font-weight="300" font-size="11" letter-spacing="9" fill="#b8b8c0">RECORDS</text>
+</svg></div><div class="foot">TIMBR · 30 · sunset #FF3D7F → #FF8A1F</div></div></body></html>
