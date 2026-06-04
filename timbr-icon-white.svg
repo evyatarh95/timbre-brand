@@ -1,0 +1,7 @@
+<svg viewBox="630 360 740 800" xmlns="http://www.w3.org/2000/svg">
+  <g fill="none" stroke="#ffffff" stroke-width="26" stroke-linejoin="round" stroke-linecap="round">
+    <polyline points="670,570 1000,390 1330,570"/>
+    <polygon points="670,570 670,720 820,805 820,1060 965,1130 965,720"/>
+    <polygon points="1330,570 1330,720 1180,805 1180,1060 1035,1130 1035,720"/>
+  </g>
+</svg>
