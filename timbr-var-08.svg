@@ -1,0 +1,25 @@
+<svg viewBox="0 0 2000 2000" xmlns="http://www.w3.org/2000/svg" width="2000" height="2000">
+  <defs>
+    <linearGradient id="vg8" gradientUnits="userSpaceOnUse" x1="500" y1="0" x2="1500" y2="0">
+      <stop offset="0" stop-color="#ff2f6d"/><stop offset="0.38" stop-color="#ff5a3d"/><stop offset="0.70" stop-color="#ff8a1f"/><stop offset="1" stop-color="#ffb000"/>
+    </linearGradient>
+  </defs>
+  <rect width="2000" height="2000" fill="#000000"/>
+  <!-- ===== MUSIC / RADIO ELEMENT (added, behind icon) ===== -->
+  <g stroke="url(#vg8)" stroke-width="12" stroke-linecap="round" fill="none" opacity="0.92">
+    <line x1="650" y1="1230" x2="812" y2="1230"/>
+    <polyline points="838,1230 856,1230 868,1206 884,1254 896,1214 908,1242 920,1230 938,1230"/>
+    <polyline points="964,1230 978,1230 990,1196 1006,1264 1018,1188 1030,1272 1042,1206 1054,1254 1066,1230 1080,1230"/>
+    <circle cx="1000" cy="1230" r="9" fill="url(#vg8)" stroke="none"/>
+    <polyline points="934,1230 948,1230 960,1188 976,1272 988,1196 1000,1264 1012,1206 1024,1254 1036,1230 1050,1230" opacity="0"/>
+    <polyline points="1062,1230 1080,1230 1092,1206 1108,1254 1120,1214 1132,1242 1144,1230 1162,1230"/>
+    <line x1="1188" y1="1230" x2="1350" y2="1230"/>
+  </g>
+  <!-- ===== CORE LOGO — DO NOT CHANGE ===== -->
+  <g fill="none" stroke="url(#vg8)" stroke-width="26" stroke-linejoin="round" stroke-linecap="round">
+    <polyline points="670,570 1000,390 1330,570"/>
+    <polygon points="670,570 670,720 820,805 820,1060 965,1130 965,720"/>
+    <polygon points="1330,570 1330,720 1180,805 1180,1060 1035,1130 1035,720"/>
+  </g>
+  <text x="1000" y="1450" text-anchor="middle" font-family="'Playfair Display', Didot, serif" font-weight="500" font-size="200" letter-spacing="78" fill="#ffffff" dx="39">TIMBR</text>
+</svg>

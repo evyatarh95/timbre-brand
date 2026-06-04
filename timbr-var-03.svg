@@ -1,0 +1,17 @@
+<svg viewBox="0 0 2000 2000" xmlns="http://www.w3.org/2000/svg" width="2000" height="2000">
+  <defs>
+    <linearGradient id="vg3" gradientUnits="userSpaceOnUse" x1="500" y1="0" x2="1500" y2="0">
+      <stop offset="0" stop-color="#ff2f6d"/><stop offset="0.38" stop-color="#ff5a3d"/><stop offset="0.70" stop-color="#ff8a1f"/><stop offset="1" stop-color="#ffb000"/>
+    </linearGradient>
+  </defs>
+  <rect width="2000" height="2000" fill="#000000"/>
+  <!-- ===== MUSIC / RADIO ELEMENT (added, behind icon) ===== -->
+  <path d="M300,900 L420,900 L470,900 L500,810 L540,990 L580,855 L625,945 L670,900 L720,900 L765,815 L800,985 L845,860 L1000,900 L1155,940 L1200,815 L1245,985 L1290,815 L1330,900 L1380,900 L1425,855 L1465,945 L1500,810 L1540,990 L1580,900 L1700,900" fill="none" stroke="url(#vg3)" stroke-width="13" stroke-linejoin="round" stroke-linecap="round" opacity="0.55"/>
+  <!-- ===== CORE LOGO — DO NOT CHANGE ===== -->
+  <g fill="none" stroke="url(#vg3)" stroke-width="26" stroke-linejoin="round" stroke-linecap="round">
+    <polyline points="670,570 1000,390 1330,570"/>
+    <polygon points="670,570 670,720 820,805 820,1060 965,1130 965,720"/>
+    <polygon points="1330,570 1330,720 1180,805 1180,1060 1035,1130 1035,720"/>
+  </g>
+  <text x="1000" y="1450" text-anchor="middle" font-family="'Playfair Display', Didot, serif" font-weight="500" font-size="200" letter-spacing="78" fill="#ffffff" dx="39">TIMBR</text>
+</svg>

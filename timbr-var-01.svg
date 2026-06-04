@@ -1,0 +1,36 @@
+<svg viewBox="0 0 2000 2000" xmlns="http://www.w3.org/2000/svg" width="2000" height="2000">
+  <defs>
+    <linearGradient id="vg1" gradientUnits="userSpaceOnUse" x1="500" y1="0" x2="1500" y2="0">
+      <stop offset="0" stop-color="#ff2f6d"/><stop offset="0.38" stop-color="#ff5a3d"/><stop offset="0.70" stop-color="#ff8a1f"/><stop offset="1" stop-color="#ffb000"/>
+    </linearGradient>
+  </defs>
+  <rect width="2000" height="2000" fill="#000000"/>
+  <!-- ===== MUSIC / RADIO ELEMENT (added, behind icon) ===== -->
+  <g fill="url(#vg1)" opacity="0.85">
+    <!-- LEFT cluster (x330..610), waveform envelope centered y780 -->
+    <rect x="330" y="745" width="16" height="70"  rx="8"/>
+    <rect x="366" y="710" width="16" height="140" rx="8"/>
+    <rect x="402" y="665" width="16" height="230" rx="8"/>
+    <rect x="438" y="615" width="16" height="330" rx="8"/>
+    <rect x="474" y="560" width="16" height="440" rx="8"/>
+    <rect x="510" y="615" width="16" height="330" rx="8"/>
+    <rect x="546" y="675" width="16" height="210" rx="8"/>
+    <rect x="582" y="725" width="16" height="110" rx="8"/>
+    <!-- RIGHT cluster (x1390..1670), mirrored -->
+    <rect x="1402" y="725" width="16" height="110" rx="8"/>
+    <rect x="1438" y="675" width="16" height="210" rx="8"/>
+    <rect x="1474" y="615" width="16" height="330" rx="8"/>
+    <rect x="1510" y="560" width="16" height="440" rx="8"/>
+    <rect x="1546" y="615" width="16" height="330" rx="8"/>
+    <rect x="1582" y="665" width="16" height="230" rx="8"/>
+    <rect x="1618" y="710" width="16" height="140" rx="8"/>
+    <rect x="1654" y="745" width="16" height="70"  rx="8"/>
+  </g>
+  <!-- ===== CORE LOGO — DO NOT CHANGE ===== -->
+  <g fill="none" stroke="url(#vg1)" stroke-width="26" stroke-linejoin="round" stroke-linecap="round">
+    <polyline points="670,570 1000,390 1330,570"/>
+    <polygon points="670,570 670,720 820,805 820,1060 965,1130 965,720"/>
+    <polygon points="1330,570 1330,720 1180,805 1180,1060 1035,1130 1035,720"/>
+  </g>
+  <text x="1000" y="1450" text-anchor="middle" font-family="'Playfair Display', Didot, serif" font-weight="500" font-size="200" letter-spacing="78" fill="#ffffff" dx="39">TIMBR</text>
+</svg>
