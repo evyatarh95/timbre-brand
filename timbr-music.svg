@@ -1,19 +1,17 @@
 <svg viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg" width="600" height="600">
   <defs>
-    <linearGradient id="gm" gradientUnits="userSpaceOnUse" x1="95" y1="0" x2="505" y2="0">
-      <stop offset="0" stop-color="#FF2D6F"/><stop offset="0.35" stop-color="#FF466B"/><stop offset="0.6" stop-color="#FF5A2B"/><stop offset="1" stop-color="#FFB024"/>
-    </linearGradient>
+    <linearGradient id="gm" gradientUnits="userSpaceOnUse" x1="236" y1="0" x2="346" y2="0"><stop offset="0" stop-color="#FF2A6E"/><stop offset="0.38" stop-color="#FF5340"/><stop offset="0.62" stop-color="#FF7E22"/><stop offset="0.82" stop-color="#FFA518"/><stop offset="1" stop-color="#FFCE3E"/></linearGradient>
   </defs>
   <rect width="600" height="600" fill="#000"/>
 
-  <!-- ===== 3D isometric T symbol (front + depth + connectors) ===== -->
-  <g fill="none" stroke="url(#gm)" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">
-    <!-- front T -->
-    <polygon points="230,152 370,152 370,184 316,184 316,332 284,332 284,184 230,184"/>
-    <!-- back T (depth, offset up-right) -->
-    <polygon points="258,126 398,126 398,158 344,158 344,306 312,306 312,158 258,158" opacity="0.9"/>
+  <!-- ===== 3D isometric beam-T symbol (exact #21 geometry, scaled) ===== -->
+  <g transform="translate(-70,2) scale(1.95)" fill="none" stroke="url(#gm)" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round">
+    <!-- back (depth) T -->
+    <polygon points="166,52 254,52 254,72 226,72 226,156 194,156 194,72 166,72" opacity="0.9"/>
     <!-- connectors -->
-    <g><line x1="230" y1="152" x2="258" y2="126"/><line x1="370" y1="152" x2="398" y2="126"/><line x1="370" y1="184" x2="398" y2="158"/><line x1="316" y1="184" x2="344" y2="158"/><line x1="316" y1="332" x2="344" y2="306"/><line x1="284" y1="332" x2="312" y2="306"/></g>
+    <g><line x1="146" y1="64" x2="166" y2="52"/><line x1="234" y1="64" x2="254" y2="52"/><line x1="234" y1="84" x2="254" y2="72"/><line x1="206" y1="84" x2="226" y2="72"/><line x1="206" y1="168" x2="226" y2="156"/><line x1="174" y1="168" x2="194" y2="156"/></g>
+    <!-- front T -->
+    <polygon points="146,64 234,64 234,84 206,84 206,168 174,168 174,84 146,84"/>
   </g>
 
   <!-- ===== soundwave bars : left + right of the T ===== -->
